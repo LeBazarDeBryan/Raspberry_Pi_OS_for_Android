@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+# Do the debhelper stuff immediately
+
+
+
+DPKG_CONFIG_FILE=/etc/dpkg/dpkg.cfg.d/50localepurge
+
+if [ "$1" = "remove" ]; then
+    # If we are being removed, then unconditionally remove the dpkg
+    # config file we generated.
+    if [ -f "$DPKG_CONFIG_FILE" ] ; then
+        echo "localepurge: Disabling auto-generated config file."
+        mv -f "$DPKG_CONFIG_FILE" "$DPKG_CONFIG_FILE.disabled"
+    fi
+fi

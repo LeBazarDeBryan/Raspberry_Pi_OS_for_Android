@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libfltk.so.1.3
+/usr/share
+/usr/share/doc
+/usr/share/doc/libfltk1.3
+/usr/share/doc/libfltk1.3/CREDITS
+/usr/share/doc/libfltk1.3/KNOWN_BUGS.html
+/usr/share/doc/libfltk1.3/NEWS.gz
+/usr/share/doc/libfltk1.3/README.gz
+/usr/share/doc/libfltk1.3/changelog.Debian.gz
+/usr/share/doc/libfltk1.3/copyright
+/usr/share/doc/libfltk1.3/html
+/usr/share/doc/libfltk1.3/html/fltk.css
+/usr/share/doc/libfltk1.3/html/hdr-top-right.gif

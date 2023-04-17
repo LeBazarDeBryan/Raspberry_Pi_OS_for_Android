@@ -1,0 +1,163 @@
+#! /bin/sh
+#
+# initscripts postinst
+#
+
+set -e
+
+. /lib/init/vars.sh
+. /lib/init/tmpfs.sh
+. /lib/init/mount-functions.sh
+
+case "$1" in
+  configure)
+	PREV_VER=$2
+	;;
+  abort-upgrade|abort-remove|abort-deconfigure)
+	exit 0
+	;;
+esac
+
+# This code (and related one in preinst) is required to make
+# /etc/rc.local file conffile, while preserving user modifications.
+#
+# It was introduced during Debian-10 freeze, and must still be in
+# Debian-11.  After that, it must be deleted.
+make_rc_local_conffile () {
+	[ -f /etc/rc.local.dpkg-old ] || return 0
+	# md5 sums of previous out-of-box versions of /etc/rc.local file,
+	# so /etc/rc.local behaves correctly: upgrades to new version
+	# silently if there is no local changes. See #923485.
+	set --
+	set -- "$@" 10fd9f051accb6fd1f753f2d48371890 # Debian-9
+	set -- "$@" 804d8261a41ed2aa9476d7cfac87acd8 # Debian-10
+	md5sum /etc/rc.local.dpkg-old
+	for md5 ; do
+		local line="${md5}  /etc/rc.local.dpkg-old"
+		if echo "${line}" | md5sum -c --status ; then
+			rm /etc/rc.local.dpkg-old
+			return 0
+		fi
+	done
+	mv /etc/rc.local.dpkg-old /etc/rc.local
+}
+make_rc_local_conffile
+
+umask 022
+
+INITSCRIPTS="mountkernfs.sh mount-configfs brightness hostname.sh mountdevsubfs.sh checkroot.sh \
+	checkroot-bootclean.sh checkfs.sh mountall.sh mountall-bootclean.sh \
+	mountnfs.sh mountnfs-bootclean.sh bootmisc.sh urandom halt reboot \
+	umountroot umountfs umountnfs.sh sendsigs killprocs single motd \
+	bootlogs rc.local rmnologin"
+
+for F in $INITSCRIPTS; do
+	if [ -x /etc/init.d/$F ]; then
+		update-rc.d $F defaults >/dev/null || exit $?
+	fi
+done
+
+mkdir -p /etc/systemd/system
+for F in $INITSCRIPTS; do
+	SERVICE="$(basename $F .sh).service"
+	if [ -x /etc/init.d/$F ] && [ ! -e /etc/systemd/system/$SERVICE ]; then
+		ln -s /dev/null /etc/systemd/system/$SERVICE
+	fi
+done
+
+#
+# Remove scripts that were left behind by older glibc (<< 2.3.2.ds1-12)
+# versions. We have the same functionality in mount{kern,devsub}fs.sh
+#
+#
+# In 2.86.ds1-10 the "mountvirtfs" script was replaced by
+# mountkernfs.sh and mountdevsubfs.sh.  It was removed completely in
+# 2.86.ds1-16.
+#
+for F in mountkernfs devpts.sh mountvirtfs
+do
+	rm -f /etc/init.d/$F
+	update-rc.d $F remove >/dev/null
+done
+
+#
+# Create initial log files
+#
+[ "$PREV_VER" ] || chmod 755 /var/log/fsck || :
+for F in /var/log/fsck/checkroot /var/log/fsck/checkfs
+do
+	if [ ! -f "$F" ] && touch "$F" >/dev/null 2>&1
+	then
+		echo "(Nothing has been logged yet.)" >| "$F"
+		chown root:adm "$F"
+		chmod 640 "$F"
+	fi
+done
+
+#
+# Create /dev/pts, /dev/shm directories
+#
+if [ "$(uname -s)" = Linux ]
+then
+	#
+	# Only create /dev/{pts,shm} if /dev is on the
+	# root file system. If some package has mounted a
+	# seperate /dev (ramfs from udev, devfs) it is
+	# responsible for the presence of those subdirs.
+	# (it is OK for these to fail under fakechroot)
+	#
+	if ! mountpoint -q /dev
+	then
+		[ -d /dev/pts ] || { mkdir --mode=755 /dev/pts ; chown root:root /dev/pts || [ "$FAKECHROOT" = true ]; }
+		[ -d /dev/shm ] || { mkdir --mode=755 /dev/shm ; chown root:root /dev/shm || [ "$FAKECHROOT" = true ]; }
+	fi
+fi
+
+#
+# Install runsystem.sysv on Hurd.
+#
+if [ "$(uname -s)" = GNU ]
+then
+	get_runsystem() {
+	    update-alternatives --query runsystem \
+		| sed -n -e '/^Value:/s|.*\.||p'
+	}
+
+	current="$(get_runsystem)"
+	update-alternatives --quiet \
+		--install /etc/hurd/runsystem runsystem \
+		/etc/hurd/runsystem.sysv 10 \
+		--slave /sbin/halt halt /sbin/halt-sysv \
+		--slave /sbin/poweroff poweroff /sbin/poweroff-sysv \
+		--slave /sbin/reboot reboot /sbin/reboot-sysv
+	new="$(get_runsystem)"
+
+	if [ "$current" != "$new" ]; then
+	    echo "Switching from runsystem.$current to runsystem.$new."
+	    echo
+	fi
+
+	echo "You can use update-alternatives --config runsystem to select"
+	echo "the runsystem to use."
+	echo
+	echo "You must use halt-hurd or reboot-hurd to halt or reboot the"
+	echo "system whenever you change the runsystem."
+fi
+
+# Ensure we have a random seed on first boot.
+if [ "$PREV_VER" = "" ]; then
+	if which invoke-rc.d >/dev/null 2>&1
+	then
+		invoke-rc.d urandom start || true
+	else
+		/etc/init.d/urandom start || true
+	fi
+fi
+
+# Automatically added by dh_installdeb/13.3.4
+dpkg-maintscript-helper rm_conffile /etc/init.d/bootlogd 2.88dsf-42 initscripts -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/stop-bootlogd 2.88dsf-42 initscripts -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/stop-bootlogd-single 2.88dsf-42 initscripts -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/motd 2.93-3\~ initscripts -- "$@"
+# End automatically added section
+

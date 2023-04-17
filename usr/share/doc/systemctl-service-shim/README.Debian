@@ -1,0 +1,6 @@
+systemctl-service-shim for Devuan
+
+This package provides the shell script that translates systemctl
+invocations into real service and update-rc.d commands.
+
+ -- B. Stack <bgstack15@gmail.com>  Fri, 11 Jun 2021 15:05:33 -0400

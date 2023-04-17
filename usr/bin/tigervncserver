@@ -1,0 +1,139 @@
+#! /usr/bin/perl
+# vim: set sw=2 sts=2 ts=8 syn=perl expandtab:
+#
+# tigervncserver - wrapper script to start a standalone X VNC server.
+#
+#  Copyright (C) 2021 Joachim Falk <joachim.falk@gmx.de>
+#
+# This is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This software is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this software; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307,
+# USA.
+
+use warnings;
+use strict;
+
+use TigerVNC::Common;
+use TigerVNC::Config;
+use TigerVNC::Wrapper;
+
+sub main {
+  my $options = { wrapperMode => 'tigervncserver' };
+
+  #
+  # First, we ensure that we're operating in a sane environment.
+  #
+  exit 1 unless &sanityCheck($options);
+
+  #
+  # Next, parses the system /etc/tigervnc/vncserver-config-defaults and the user
+  # ~/.vnc/tigervnc.conf configuration file as well as processes the command line.
+  #
+  &getConfig($options);
+
+  if ($options->{'usageError'} || $options->{'help'}) {
+    &usage($options);
+    exit($options->{'usageError'} ? 1 : 0);
+  }
+  unless (defined $options->{'displayHost'}) {
+    $options->{'displayHost'} = $HOSTFQDN;
+  }
+  if ($options->{'remote'}) {
+    my @cmdPrefix = ("ssh", "$options->{'displayHost'}", "tigervncserver");
+    # Get rid of possible user@ in front of displayHost.
+    $options->{'displayHost'} =~ s/^[^@]*@//;
+    my @cmd;
+    if ( $options->{'kill'} ) {
+      push @cmd, "-kill";
+      push @cmd, ":$options->{'displayNumber'}" if defined $options->{'displayNumber'};
+      push @cmd, "-dry-run" if $options->{'dry-run'};
+      push @cmd, "-clean" if ($options->{'clean'});
+    } elsif ( $options->{'list'} ) {
+      push @cmd, "-list";
+      push @cmd, ":$options->{'displayNumber'}" if defined $options->{'displayNumber'};
+      push @cmd, "-cleanstale" if ($options->{'cleanstale'});
+    } elsif ( $options->{'version'} ) {
+      push @cmd, "-version";
+    } else {
+      push @cmd, ":$options->{'displayNumber'}" if defined $options->{'displayNumber'};
+
+      my $userOptions = { wrapperMode => 'tigervncserver' };
+      while (my ($key, $value) = each %{$options}) {
+        my $src = $options->{'src'}->{$key} // "undef";
+        if ($src eq 'user' || $src eq 'cmdline') {
+          $userOptions->{'src'}->{$key} = $src;
+          $userOptions->{$key}          = $value;
+        }
+      }
+      $userOptions->{'vncServerExtraArgs'} = [grep {
+	  $_->{'src'} eq 'user' || $_->{'src'} eq 'cmdline';
+	} @{$options->{'vncServerExtraArgs'}}];
+      my @session;
+      foreach my $optionParseEntry (@{&getOptionParseTable($userOptions)}) {
+        my ($flags, $optname, $store) = @{$optionParseEntry};
+        next unless $flags & &OPT_TIGERVNCSERVER;
+        $optname =~ m/^([^:=|]*)/;
+        my $name  = $1;
+        my $value = &{$store}($name);
+        if ($name eq 'session') {
+          @session = @{$value} if defined $value;
+          next; # Session is a pseudo option, it's given via -- <session>.
+        }
+        # Display is already handled
+        next if $name eq 'display';
+        if ($optname =~ m/:/) {
+          push @cmd, "-$name=$value" if defined $value;
+        } elsif ($optname =~ m/=/) {
+          push @cmd, "-$name", $value if defined $value;
+	} elsif (!($optname =~ m/[:=]/)) {
+          push @cmd, "-$name" if $value;
+        } else {
+          die "Oops, can't parse $optname format!";
+        }
+      }
+      push @cmd, map { @{$_->{'args'}} } @{$userOptions->{'vncServerExtraArgs'}};
+      push @cmd, '--', @session if @session > 0;
+    }
+    @cmd = (@cmdPrefix, map { &quotedString($_); } @cmd);
+    print join(" ",@cmd), "\n" if $options->{'verbose'};
+    if (system (@cmd)) {
+      print STDERR "\n$PROG: Command '", join(" ", @cmd), "' failed: $?\n";
+      exit -1;
+    }
+    if (!$options->{'kill'} && !$options->{'list'} && !$options->{'version'}) {
+      # Feedback on how to connect to the remote tigervnc server.
+      print "Use xtigervncviewer -via $options->{'displayHost'} :n to connect!\n";
+      print "The display number :n is given in the above startup message from tigervncserver.\n";
+    }
+    exit 0;
+  }
+
+  if ($options->{'kill'}) {
+    my $err = &killVncServers($options);
+    exit($err ? 1 : 0);
+  } elsif ($options->{'list'}) {
+    &listVncServers(\*STDOUT, $options);
+    exit 0;
+  } elsif ($options->{'version'}) {
+    my @cmd = (&getCommand("Xtigervnc"), "-version");
+    if (system {$cmd[0]} (@cmd)) {
+      exit 1;
+    } else {
+      exit 0;
+    }
+  } else {
+    exit &startVncServer($options);
+  }
+}
+
+&main;

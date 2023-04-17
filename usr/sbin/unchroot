@@ -1,0 +1,15 @@
+#!/bin/sh
+if [ "$(whoami)" != "root" ]; then
+sudo $0 "$@"; exit $?
+fi
+chroot_exec=$(which chroot)
+export PATH=/data/user/0/com.desktopecho.pideploy/files/bin:/data/user/0/com.desktopecho.pideploy/files/bin:/product/bin:/apex/com.android.runtime/bin:/apex/com.android.art/bin:/system_ext/bin:/system/bin:/system/xbin:/odm/bin:/vendor/bin:/vendor/xbin
+export BOOTCLASSPATH=/apex/com.android.art/javalib/core-oj.jar:/apex/com.android.art/javalib/core-libart.jar:/apex/com.android.art/javalib/core-icu4j.jar:/apex/com.android.art/javalib/okhttp.jar:/apex/com.android.art/javalib/bouncycastle.jar:/apex/com.android.art/javalib/apache-xml.jar:/system/framework/framework.jar:/system/framework/ext.jar:/system/framework/telephony-common.jar:/system/framework/voip-common.jar:/system/framework/ims-common.jar:/system/framework/framework-atb-backward-compatibility.jar:/system/framework/telephony-ext.jar:/apex/com.android.conscrypt/javalib/conscrypt.jar:/apex/com.android.media/javalib/updatable-media.jar:/apex/com.android.mediaprovider/javalib/framework-mediaprovider.jar:/apex/com.android.os.statsd/javalib/framework-statsd.jar:/apex/com.android.permission/javalib/framework-permission.jar:/apex/com.android.sdkext/javalib/framework-sdkextensions.jar:/apex/com.android.wifi/javalib/framework-wifi.jar:/apex/com.android.tethering/javalib/framework-tethering.jar
+export ANDROID_DATA=/data
+export EXTERNAL_STORAGE=/sdcard
+export ANDROID_STORAGE=/storage
+if [ $# -eq 0 ]; then
+$chroot_exec /proc/1/cwd su -
+else
+$chroot_exec /proc/1/cwd "$@"
+fi

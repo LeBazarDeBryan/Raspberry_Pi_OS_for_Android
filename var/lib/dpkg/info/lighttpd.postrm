@@ -1,0 +1,51 @@
+#!/bin/sh -e
+# postrm script for lighttpd
+
+set -e
+
+if [ "$1" = "purge" ]; then
+    rm -rf /var/log/lighttpd /run/lighttpd /var/cache/lighttpd
+
+
+    if [ -d /etc/lighttpd/conf-enabled/ ] ; then
+        # The loop below fixes #642494 (mostly)
+        for link in /etc/lighttpd/conf-enabled/*.conf ; do
+            target=$(readlink "$link") || true
+	    if [ -n "$target" ] && [ ! -e "/etc/lighttpd/conf-enabled/$target" ] ; then
+                echo "removing dangling symlink $link ..."
+                rm -f $link
+            fi
+        done
+    fi
+fi
+
+# Automatically added by dh_installinit/13.3.4
+if [ "$1" = "purge" ] ; then
+	update-rc.d lighttpd remove >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.3.4
+dpkg-maintscript-helper rm_conffile /etc/lighttpd/conf-available/10-access.conf 1.4.31-4 lighttpd -- "$@"
+# End automatically added section
+# Automatically added by dh_installsystemd/13.3.4
+if [ -d /run/systemd/system ] && [ "$1" = remove ]; then
+	systemctl --system daemon-reload >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.3.4
+if [ "$1" = "remove" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper mask 'lighttpd.service' >/dev/null || true
+	fi
+fi
+
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'lighttpd.service' >/dev/null || true
+		deb-systemd-helper unmask 'lighttpd.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+
+
+exit 0

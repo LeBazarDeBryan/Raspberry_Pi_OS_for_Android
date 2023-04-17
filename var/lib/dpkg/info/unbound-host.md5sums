@@ -1,0 +1,5 @@
+631cff5e9c528d8088a5e1e579dbe80a  usr/bin/unbound-host
+6f29b69b314f0a8e3cf64932aaea137f  usr/share/doc/unbound-host/changelog.Debian.gz
+a419179537e7835f9585cbc5d641bcad  usr/share/doc/unbound-host/changelog.gz
+a466482a9b43fe730579687fdf9785e3  usr/share/doc/unbound-host/copyright
+c28d26e1269e069d4b02cb3a7f556f44  usr/share/man/man1/unbound-host.1.gz

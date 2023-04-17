@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/xorg
+/usr/lib/xorg/modules
+/usr/lib/xorg/modules/extensions
+/usr/lib/xorg/modules/extensions/libvnc.so
+/usr/share
+/usr/share/doc
+/usr/share/doc/tigervnc-xorg-extension
+/usr/share/doc/tigervnc-xorg-extension/changelog.Debian.gz
+/usr/share/doc/tigervnc-xorg-extension/copyright

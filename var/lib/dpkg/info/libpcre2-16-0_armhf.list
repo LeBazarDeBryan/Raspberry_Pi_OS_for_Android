@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libpcre2-16.so.0.10.1
+/usr/share
+/usr/share/doc
+/usr/share/doc/libpcre2-16-0
+/usr/share/doc/libpcre2-16-0/changelog.Debian.gz
+/usr/share/doc/libpcre2-16-0/changelog.gz
+/usr/share/doc/libpcre2-16-0/copyright
+/usr/lib/arm-linux-gnueabihf/libpcre2-16.so.0

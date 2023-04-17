@@ -1,0 +1,13 @@
+/.
+/bin
+/bin/startpar
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/startpar
+/usr/share/doc/startpar/changelog.Debian.gz
+/usr/share/doc/startpar/changelog.gz
+/usr/share/doc/startpar/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/startpar.1.gz

@@ -1,0 +1,85 @@
+#! /usr/bin/perl
+# vim: set sw=2 sts=2 ts=8 syn=perl expandtab:
+#
+# x0tigervncserver - wrapper script to start a scraping X VNC server.
+#
+#  Copyright (C) 2021 Joachim Falk <joachim.falk@gmx.de>
+#
+# This is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# This software is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this software; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307,
+# USA.
+
+use warnings;
+use strict;
+
+use TigerVNC::Common;
+use TigerVNC::Config;
+use TigerVNC::Wrapper;
+
+sub main {
+  my $options = { wrapperMode => 'x0tigervncserver' };
+
+  #
+  # First, we ensure that we're operating in a sane environment.
+  #
+  exit 1 unless &sanityCheck($options);
+
+  #
+  # Next, parses the system /etc/tigervnc/vncserver-config-defaults and the user
+  # ~/.vnc/tigervnc.conf configuration file as well as processes the command line.
+  #
+  &getConfig($options);
+
+  if ($options->{'usageError'} || $options->{'help'}) {
+    &usage($options);
+    exit($options->{'usageError'} ? 1 : 0);
+  }
+
+  if ($options->{'kill'}) {
+    my $err = &killVncServers($options);
+    exit($err ? 1 : 0);
+  } elsif ($options->{'list'}) {
+    &listVncServers(\*STDOUT, $options);
+    exit 0;
+  } elsif ($options->{'version'}) {
+    my @cmd = (&getCommand("X0tigervnc"), "-version");
+    if (system {$cmd[0]} (@cmd)) {
+      exit 1;
+    } else {
+      exit 0;
+    }
+  } else {
+    if (!defined $options->{'displayNumber'}) {
+      if (!defined $ENV{'DISPLAY'}) {
+	print STDERR "$PROG: No display given and no DISPLAY environment variable!\n\n";
+	exit 1;
+      } elsif (!($ENV{'DISPLAY'} =~ m/^(.*):(\d+)(?:\.\d+)?$/)) {
+	print STDERR "$PROG: Can't parse DISPLAY environment variable!\n\n";
+	exit 1;
+      }
+      my ($host, $nr) = ($1, $2);
+      $options->{'displayHost'}   = $host;
+      $options->{'displayNumber'} = $nr;
+    } else {
+      if (-e "/tmp/.X11-unix/X$options->{'displayNumber'}" ) {
+	$ENV{'DISPLAY'}= ":$options->{'displayNumber'}";
+      } else {
+	$ENV{'DISPLAY'}= "$HOSTFQDN:$options->{'displayNumber'}";
+      }
+    }
+    exit &startVncServer($options);
+  }
+}
+
+&main;

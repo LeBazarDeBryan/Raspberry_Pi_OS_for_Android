@@ -1,0 +1,14 @@
+52c7c06200bc5776f9dd44604c2cc1b2  usr/lib/arm-linux-gnueabihf/perl5/5.32/Curses.pm
+78f40f67918caff68d7df6423bd30f5a  usr/lib/arm-linux-gnueabihf/perl5/5.32/auto/Curses/Curses.so
+66ea1ba63eff6ac4bf5f6a07026156df  usr/share/doc/libcurses-perl/README.Debian
+1bf19b9aa1e7a8bfd82aed1507df9c4b  usr/share/doc/libcurses-perl/README.gz
+5da455ca6cd00c302e06e5ce4978ee9c  usr/share/doc/libcurses-perl/changelog.Debian.armhf.gz
+7bff87b9fe7078cc3aaf6979f1cb7c50  usr/share/doc/libcurses-perl/changelog.Debian.gz
+f191cad210e057b3f5f457cf4ba6cddd  usr/share/doc/libcurses-perl/changelog.gz
+fb4530546f3c377a258ac97d246172e5  usr/share/doc/libcurses-perl/copyright
+9ceac8b90b61569dc9fb1aaeca284cd9  usr/share/doc/libcurses-perl/examples/demo
+dd2385c9765eae98f93b2a786d9d4d75  usr/share/doc/libcurses-perl/examples/demo.form
+6824ee45ac46d8212d1a5e64ccce4686  usr/share/doc/libcurses-perl/examples/demo.menu
+f4473a97508c3efb6e34215b0541c711  usr/share/doc/libcurses-perl/examples/demo.panel
+0801544f939b4bf12c2ad9e94833d878  usr/share/doc/libcurses-perl/examples/demo2
+0edc1e5874be08e86e8796745e8b3c3f  usr/share/man/man3/Curses.3pm.gz

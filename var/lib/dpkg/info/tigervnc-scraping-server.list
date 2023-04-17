@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/bin
+/usr/bin/X0tigervnc
+/usr/bin/x0tigervncserver
+/usr/share
+/usr/share/doc
+/usr/share/doc/tigervnc-scraping-server
+/usr/share/doc/tigervnc-scraping-server/changelog.Debian.gz
+/usr/share/doc/tigervnc-scraping-server/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/X0tigervnc.1.gz
+/usr/share/man/man1/x0tigervncserver.1.gz

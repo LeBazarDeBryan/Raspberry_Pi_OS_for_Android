@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "remove" ] ; then
+  bindir=/usr/bin
+  mandir=/usr/share/man
+
+  for tiger in tigervncconfig tigervncpasswd; do
+    notiger=`echo $tiger | sed -e 's/tiger//'`;
+    update-alternatives --remove $notiger $bindir/$tiger
+  done
+fi
+
+
+
+exit 0

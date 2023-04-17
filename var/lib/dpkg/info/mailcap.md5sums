@@ -1,0 +1,11 @@
+b3b07fc50ad81e152041058b920113b4  usr/bin/run-mailcap
+33fceb3260d267efa7730a6703fee821  usr/lib/mime/debian-view
+d63e3ff68e343dcfcccbfe1f5141e70d  usr/lib/mime/mailcap
+f4e89420c03460d54a09af43012075db  usr/lib/mime/packages/mailcap
+8f7c640a58ca9f24c52397d09d7bb47f  usr/sbin/update-mime
+6e542d9665306095d70cfa7a7df0e2b7  usr/share/doc/mailcap/changelog.gz
+881b8546ad4d18ee8d55d42c93cda0b6  usr/share/doc/mailcap/copyright
+e2f32f496fdeef85e5484e1429107156  usr/share/man/man1/run-mailcap.1.gz
+7f56881b2f40dbdc0578256eb17545b5  usr/share/man/man5/mailcap.5.gz
+19330b020ac8087d2c3a8af4c981b6ef  usr/share/man/man5/mailcap.order.5.gz
+b95c86822f86a1d1563c6193f5c0b0c8  usr/share/man/man8/update-mime.8.gz

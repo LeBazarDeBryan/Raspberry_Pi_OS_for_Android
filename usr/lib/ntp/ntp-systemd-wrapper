@@ -1,0 +1,21 @@
+#!/bin/sh
+
+DAEMON=/usr/sbin/ntpd
+PIDFILE=/var/run/ntpd.pid
+
+if [ -r /etc/default/ntp ]; then
+        . /etc/default/ntp
+fi
+
+if [ -e /run/ntp.conf.dhcp ]; then
+        NTPD_OPTS="$NTPD_OPTS -c /run/ntp.conf.dhcp"
+fi
+
+RUNASUSER=ntp
+UGID=$(getent passwd $RUNASUSER | cut -f 3,4 -d:) || true
+if test "$(uname -s)" = "Linux"; then
+        NTPD_OPTS="$NTPD_OPTS -u $UGID"
+fi
+
+exec $DAEMON -p $PIDFILE $NTPD_OPTS
+

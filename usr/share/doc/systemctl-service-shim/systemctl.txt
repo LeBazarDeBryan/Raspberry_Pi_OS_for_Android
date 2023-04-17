@@ -1,0 +1,24 @@
+title systemctl
+section 8
+project devuan-sanity
+volume Devuan Commands Manual
+date January 2021
+=====
+NAME
+  systemctl - Translate systemctl invocations into real service commands
+SYNOPSIS
+  systemctl [OPTIONS...] COMMAND [SERVICE...]
+DESCRIPTION
+  Transform and execute every systemctl invocation into a single or multiple service and update-rc.d commands. This script attemps to replace systemctl from the systemd project, for applications that are hardcoded errantly to use systemctl instead of real service control operations.
+
+  The goal is to convert all possible systemctl tasks to real service commands.
+
+  The script will log all invocations to /var/log/systemctl.log to assist in troubleshooting.
+AUTHOR
+  B. Stack <bgstack15@gmail.com>
+COPYRIGHT  
+  CC-BY-SA 4.0
+BUGS
+  Of course no software is ever perfect. Please report bugs to bgstack15 on the #devuan-dev irc channel on freenode.net, or at <bgstack15@gmail.com>
+SEE ALSO
+  `systemctl(1) from systemd`

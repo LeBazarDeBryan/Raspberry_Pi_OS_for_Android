@@ -1,0 +1,6 @@
+#%PAM-1.0
+auth	sufficient	pam_succeed_if.so uid = 0 use_uid quiet
+auth		include		su
+account		include		su
+password	include		su
+session		include		su

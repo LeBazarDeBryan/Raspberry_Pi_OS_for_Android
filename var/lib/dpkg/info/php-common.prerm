@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "remove" -o "$1" = "purge" ]; then
+    if dpkg-statoverride --list /var/lib/php/sessions >/dev/null; then
+	dpkg-statoverride --remove /var/lib/php/sessions;
+    fi
+fi
+
+# Automatically added by dh_systemd_start/13
+if [ -d /run/systemd/system ] && [ "$1" = remove ]; then
+	deb-systemd-invoke stop 'phpsessionclean.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_systemd_start/13
+if [ -d /run/systemd/system ] && [ "$1" = remove ]; then
+	deb-systemd-invoke stop 'phpsessionclean.timer' >/dev/null || true
+fi
+# End automatically added section
+
+
+exit 0

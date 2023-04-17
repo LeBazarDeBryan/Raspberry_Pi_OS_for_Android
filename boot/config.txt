@@ -1,0 +1,4 @@
+disable_overscan=1
+dtparam=spi=off
+dtparam=i2c_arm=off
+enable_uart=0

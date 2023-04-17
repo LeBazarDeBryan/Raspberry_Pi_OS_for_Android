@@ -1,0 +1,7 @@
+dc56ff9c6c431f98e3812d9b8db881dd  usr/lib/arm-linux-gnueabihf/libstartup-notification-1.so.0.0.0
+8693fdb5ebb20478db86e376fb870a99  usr/share/doc/libstartup-notification0/NEWS.gz
+71593e9e0be9df10412fae2a49131053  usr/share/doc/libstartup-notification0/changelog.Debian.armhf.gz
+0ee07fd4c087dbbbf2a38964ee4cc3fb  usr/share/doc/libstartup-notification0/changelog.Debian.gz
+60d12cb649d08120d4d83793a9251912  usr/share/doc/libstartup-notification0/changelog.gz
+5e0ccef1133249ac0cde37692acf7753  usr/share/doc/libstartup-notification0/copyright
+a5d6460176109d82a515dfd336754857  usr/share/lintian/overrides/libstartup-notification0

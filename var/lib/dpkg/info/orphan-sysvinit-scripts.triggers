@@ -1,0 +1,7 @@
+interest-noawait /lib/systemd/system/NetworkManager.service
+interest-noawait /lib/systemd/system/dirsrv.service
+interest-noawait /lib/systemd/system/dnscrypt-proxy.service
+interest-noawait /lib/systemd/system/gpsd.service
+interest-noawait /lib/systemd/system/iwd.service
+interest-noawait /lib/systemd/system/nftables.service
+interest-noawait /lib/systemd/system/tomcat9.service

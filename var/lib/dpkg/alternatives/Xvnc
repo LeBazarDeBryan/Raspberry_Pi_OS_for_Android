@@ -1,0 +1,9 @@
+auto
+/usr/bin/Xvnc
+Xvnc.1.gz
+/usr/share/man/man1/Xvnc.1.gz
+
+/usr/bin/Xtigervnc
+80
+/usr/share/man/man1/Xtigervnc.1.gz
+

@@ -1,0 +1,11 @@
+f805b2c0f52cda0679d78f95ce3eab47  usr/lib/arm-linux-gnueabihf/libbind9-9.16.33-Raspbian.so
+abd25067f98ba9c0f52a21cc95f55be9  usr/lib/arm-linux-gnueabihf/libdns-9.16.33-Raspbian.so
+cf090cfc715a5b857d5ff1ece819559e  usr/lib/arm-linux-gnueabihf/libirs-9.16.33-Raspbian.so
+5f537fd3c07e1d783add0dfcaf156ebe  usr/lib/arm-linux-gnueabihf/libisc-9.16.33-Raspbian.so
+cd913ae057c3682f1358eb9d6d62cd5b  usr/lib/arm-linux-gnueabihf/libisccc-9.16.33-Raspbian.so
+bad83690a41e684aa3a3b08343950295  usr/lib/arm-linux-gnueabihf/libisccfg-9.16.33-Raspbian.so
+b0a65fa6ee4b78924dbc662139d7472e  usr/lib/arm-linux-gnueabihf/libns-9.16.33-Raspbian.so
+102b3f5e2b079d8ee411b30b17e8c322  usr/share/doc/bind9-libs/changelog.Debian.gz
+3bd7020919a7bc456b0c55cd7b5f7a32  usr/share/doc/bind9-libs/changelog.gz
+87d36bb6374958d7dfd3db0dcc7a6253  usr/share/doc/bind9-libs/copyright
+5a8db1f2385c80b7537a5614f81d6e26  usr/share/lintian/overrides/bind9-libs

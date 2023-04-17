@@ -1,0 +1,33 @@
+#! /bin/sh
+
+set -e
+
+if [ "$1" = purge ]; then
+    rm -rf /var/lib/binfmts
+fi
+
+# Automatically added by dh_installinit/12.10
+if [ "$1" = "purge" ] ; then
+	update-rc.d binfmt-support remove >/dev/null
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/12.10
+dpkg-maintscript-helper rm_conffile /etc/init/binfmt-support.conf 2.1.8-1~ -- "$@"
+# End automatically added section
+# Automatically added by dh_systemd_enable/12.10
+if [ "$1" = "remove" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper mask 'binfmt-support.service' >/dev/null || true
+	fi
+fi
+
+if [ "$1" = "purge" ]; then
+	if [ -x "/usr/bin/deb-systemd-helper" ]; then
+		deb-systemd-helper purge 'binfmt-support.service' >/dev/null || true
+		deb-systemd-helper unmask 'binfmt-support.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+
+
+exit 0

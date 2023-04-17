@@ -1,0 +1,11 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libivykis.so.0.5.6
+/usr/share
+/usr/share/doc
+/usr/share/doc/libivykis0
+/usr/share/doc/libivykis0/changelog.Debian.gz
+/usr/share/doc/libivykis0/copyright
+/usr/lib/arm-linux-gnueabihf/libivykis.so.0

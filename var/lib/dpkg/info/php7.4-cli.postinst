@@ -1,0 +1,41 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ]; then
+    for binary in php phar phar.phar; do
+        update-alternatives \
+	    --install /usr/bin/${binary} ${binary} /usr/bin/${binary}7.4 74 \
+	    --slave /usr/share/man/man1/${binary}.1.gz ${binary}.1.gz /usr/share/man/man1/${binary}7.4.1.gz
+    done
+fi
+
+CONFDIR=/etc/php/7.4/cli/conf.d
+
+if [ "$1" = "configure" ]; then
+    phpini="/etc/php/7.4/cli/php.ini"
+
+    if [ "cli" = "cli" ]; then
+	ucf /usr/lib/php/7.4/php.ini-production.cli $phpini
+    else
+	ucf /usr/lib/php/7.4/php.ini-production $phpini
+    fi
+    ucfr php7.4-cli $phpini
+
+    if [ -e /usr/lib/php/php-maintscript-helper ]; then
+	. /usr/lib/php/php-maintscript-helper
+	
+	mods=$(phpquery -M -v 7.4)
+	for mod in $mods; do
+	    php_invoke enmod 7.4 cli $mod
+	done
+    fi
+
+    if [ -n "$2" ] && dpkg --compare-versions "$2" lt "7.0.3-2~"; then
+	rm -f /etc/php/7.4/cli/conf.d/20-opcache.ini;
+    fi	    
+fi
+
+
+
+exit 0

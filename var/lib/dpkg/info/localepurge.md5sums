@@ -1,0 +1,9 @@
+237a5807668ea056c0150069245be9ca  usr/sbin/localepurge
+38d0bbac52510b62de95439ef76c2fa8  usr/share/doc/localepurge/README.Debian
+491e46867fc66f8890d27e4cf10e98eb  usr/share/doc/localepurge/README.dpkg-path
+f086d62d5fada54d1be3f58c1ba99852  usr/share/doc/localepurge/changelog.gz
+fa4524746ecf9b00788cfe4956f67f9a  usr/share/doc/localepurge/copyright
+6fc4dfd4aad16186ca32dce9fb15a1a3  usr/share/doc/localepurge/reinstall_debs.sh
+ecb221c03cc556f502610bc5c4529082  usr/share/localepurge/gen-dpkg-cfg.pl
+6460d2b61ad8b9e182dd9a87e3412659  usr/share/localepurge/gen-dpkg-cfg.pl.tdy
+b57360f52eeae48d8db1f64f0787b8f0  usr/share/man/man8/localepurge.8.gz

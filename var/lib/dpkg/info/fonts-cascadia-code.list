@@ -1,0 +1,16 @@
+/.
+/usr
+/usr/share
+/usr/share/doc
+/usr/share/doc/fonts-cascadia-code
+/usr/share/doc/fonts-cascadia-code/FONTLOG.txt
+/usr/share/doc/fonts-cascadia-code/README.md
+/usr/share/doc/fonts-cascadia-code/changelog.Debian.gz
+/usr/share/doc/fonts-cascadia-code/copyright
+/usr/share/fonts
+/usr/share/fonts/truetype
+/usr/share/fonts/truetype/cascadia-code
+/usr/share/fonts/truetype/cascadia-code/CascadiaCode.ttf
+/usr/share/fonts/truetype/cascadia-code/CascadiaCodePL.ttf
+/usr/share/fonts/truetype/cascadia-code/CascadiaMono.ttf
+/usr/share/fonts/truetype/cascadia-code/CascadiaMonoPL.ttf

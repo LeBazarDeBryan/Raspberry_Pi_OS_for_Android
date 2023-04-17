@@ -1,0 +1,11 @@
+# Mapping of systemd unit file to sysvinit file names
+# Syntax is:
+# servicename sysvinitname rc.d
+# (only need specify rc.d if it's not "defaults")
+NetworkManager.service network-manager
+dirsrv.service dirsrv
+dnscrypt-proxy.service dnscrypt-proxy
+gpsd.service gpsd
+iwd.service iwd
+nftables.service nftables
+tomcat9.service tomcat9

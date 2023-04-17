@@ -1,0 +1,6 @@
+/dev/block/bootdevice/by-name/userdata / f2fs rw,lazytime,seclabel,noatime,nodiratime,background_gc=on,discard,no_heap,user_xattr,inline_xattr,acl,inline_data,inline_dentry,flush_merge,nobarrier,extent_cache,mode=adaptive,active_logs=6,reserve_root=11582,resuid=0,resgid=1065,alloc_mode=default,fsync_mode=posix 0 0
+proc /proc proc rw,relatime,gid=3009 0 0
+sys /sys sysfs rw,seclabel,relatime 0 0
+tmpfs /dev tmpfs rw,seclabel,nosuid,relatime,size=908936k,nr_inodes=227234,mode=755 0 0
+tmpfs /dev/shm tmpfs rw,seclabel,nosuid,nodev,relatime 0 0
+devpts /dev/pts devpts rw,seclabel,relatime,mode=600,ptmxmode=000 0 0

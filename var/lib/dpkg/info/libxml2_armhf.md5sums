@@ -1,0 +1,8 @@
+c69e0f5d00971dbfaba8ed94db038388  usr/lib/arm-linux-gnueabihf/libxml2.so.2.9.10
+9261d67cf0df4641bb11fd4a8c864ee7  usr/share/doc/libxml2/AUTHORS
+b904cd11db3e0a5ea5035f8c5ca77dd8  usr/share/doc/libxml2/README
+d2d496e80a9bcf6781f7425612193c2d  usr/share/doc/libxml2/README.Debian
+0998b60f4e3da707319c3a547a71812a  usr/share/doc/libxml2/changelog.Debian.gz
+290deabc6578a9912e9d1d2fe3e66a9a  usr/share/doc/libxml2/changelog.gz
+08abddf847405b3b1e8bb6aaf31ee1a4  usr/share/doc/libxml2/copyright
+d2585ea42cb6ec3a0f95ac452f29128c  usr/share/lintian/overrides/libxml2

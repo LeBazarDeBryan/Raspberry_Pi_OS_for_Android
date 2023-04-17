@@ -1,0 +1,4 @@
+22c5a32a4b5676826ce18ee0e6e7634a  usr/bin/xdg-dbus-proxy
+a655e257f5d5afa7f7b40cc7a4ec8d9c  usr/share/doc/xdg-dbus-proxy/changelog.Debian.gz
+1d3f3a597939def1ae99bda441ed11bd  usr/share/doc/xdg-dbus-proxy/copyright
+c762e4f62a536f440996391ead046064  usr/share/man/man1/xdg-dbus-proxy.1.gz

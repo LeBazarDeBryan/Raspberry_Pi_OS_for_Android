@@ -1,0 +1,7 @@
+371902af758b93006d170233a6970ebc  usr/lib/gnupg/gpg-wks-client
+6b9684184004bcc1c23f712e7a057733  usr/share/doc/gpg-wks-client/NEWS.Debian.gz
+5bdd9c36204e9267555f4356c664912e  usr/share/doc/gpg-wks-client/changelog.Debian.gz
+9d1164fb168c7d52eab42151583fdeca  usr/share/doc/gpg-wks-client/changelog.gz
+611841fd2504d910d4b8ea4007edbf14  usr/share/doc/gpg-wks-client/copyright
+578b2499979a97e6bf9debb0166f93d5  usr/share/lintian/overrides/gpg-wks-client
+98c844276e137844473782c67e963460  usr/share/man/man1/gpg-wks-client.1.gz

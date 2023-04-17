@@ -1,0 +1,4 @@
+/etc/default/inetutils-syslogd
+/etc/init.d/inetutils-syslogd
+/etc/logrotate.d/inetutils-syslogd
+/etc/syslog.conf

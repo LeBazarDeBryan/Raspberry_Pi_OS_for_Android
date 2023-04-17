@@ -1,0 +1,2 @@
+no-manual-page usr/bin/hostnamectl
+no-manual-page usr/bin/systemd-detect-virt

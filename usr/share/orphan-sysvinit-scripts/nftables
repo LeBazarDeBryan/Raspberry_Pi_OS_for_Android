@@ -1,0 +1,45 @@
+#! /bin/sh
+# kFreeBSD do not accept scripts as interpreters, using #!/bin/sh and sourcing.
+if [ true != "$INIT_D_SCRIPT_SOURCED" ] ; then
+    set "$0" "$@"; INIT_D_SCRIPT_SOURCED=true . /lib/init/init-d-script
+fi
+### BEGIN INIT INFO
+# Provides:          nftables
+# Required-Start:    $local_fs $network
+# Required-Stop:     $local_fs $network
+# Should-Start:      
+# Default-Start:     S
+# Default-Stop:      0 1 6
+# Short-Description: Loads nftables firewall rules
+# Description: Loads nftables firewall rules
+### END INIT INFO
+
+# Author: Carsten Leonhardt <leo@debian.org>
+
+DESC="nftables"
+DAEMON=none
+PIDFILE=none
+NFT=/usr/sbin/nft
+
+# Exit if the package is not installed.
+[ -x "$NFT" ] || exit 0
+
+
+do_start_cmd_override () {
+   $NFT -f /etc/nftables.conf
+}
+
+do_stop_cmd_override () {
+  $NFT flush ruleset
+}
+
+do_status_override () {
+  if test `$NFT list ruleset | wc -c` -gt 0;
+  then 
+    echo nft ruleset loaded: yes
+    return 0
+  else
+    echo nft ruleset loaded: no
+    return 1
+  fi
+}

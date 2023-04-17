@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/sbin
+/usr/sbin/unbound-anchor
+/usr/share
+/usr/share/doc
+/usr/share/doc/unbound-anchor
+/usr/share/doc/unbound-anchor/changelog.Debian.gz
+/usr/share/doc/unbound-anchor/changelog.gz
+/usr/share/doc/unbound-anchor/copyright
+/usr/share/man
+/usr/share/man/man8
+/usr/share/man/man8/unbound-anchor.8.gz

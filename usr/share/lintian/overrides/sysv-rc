@@ -1,0 +1,9 @@
+sysv-rc: package-installs-into-etc-rc.d etc/rcS.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc0.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc1.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc2.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc3.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc4.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc5.d/README
+sysv-rc: package-installs-into-etc-rc.d etc/rc6.d/README
+sysv-rc: no-upstream-changelog

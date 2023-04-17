@@ -1,0 +1,12 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libxcb-xinput.so.0.1.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libxcb-xinput0
+/usr/share/doc/libxcb-xinput0/changelog.Debian.gz
+/usr/share/doc/libxcb-xinput0/changelog.gz
+/usr/share/doc/libxcb-xinput0/copyright
+/usr/lib/arm-linux-gnueabihf/libxcb-xinput.so.0

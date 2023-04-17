@@ -1,0 +1,11 @@
+#!/bin/bash
+apt-get purge --autoremove ; apt-get clean
+userdel -f -r android
+rm -fv /etc/ssh/ssh_host_*
+rm -fv /etc/dropbear/*key
+rm -fv /home/android/.bash_history
+rm -rfv /var/lib/apt/lists/*
+rm -fv /tmp/*
+rm -fv ~/.bash_history
+rm -rf /var/log/dmesg*
+cd /var/log ; find . -type f -iname "*" -exec cp /dev/null {} \;

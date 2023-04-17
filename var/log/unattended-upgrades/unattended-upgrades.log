@@ -1,0 +1,59 @@
+2022-10-21 06:48:18,893 INFO Checking if system is running on battery is skipped. Please install powermgmt-base package to check power status and skip installing updates when the system is running on battery.
+2022-10-21 06:48:18,999 INFO Starting unattended upgrades script
+2022-10-21 06:48:19,002 INFO Allowed origins are: origin=Debian,codename=bullseye,label=Debian, origin=Debian,codename=bullseye,label=Debian-Security, origin=Debian,codename=bullseye-security,label=Debian-Security
+2022-10-21 06:48:19,004 INFO Initial blacklist: 
+2022-10-21 06:48:19,005 INFO Initial whitelist (not strict): 
+2022-10-21 06:48:22,435 INFO Checking if system is running on battery is skipped. Please install powermgmt-base package to check power status and skip installing updates when the system is running on battery.
+2022-10-21 06:48:22,512 INFO Starting unattended upgrades script
+2022-10-21 06:48:22,514 INFO Allowed origins are: origin=Debian,codename=bullseye,label=Debian, origin=Debian,codename=bullseye,label=Debian-Security, origin=Debian,codename=bullseye-security,label=Debian-Security
+2022-10-21 06:48:22,516 INFO Initial blacklist: 
+2022-10-21 06:48:22,516 INFO Initial whitelist (not strict): 
+2022-10-21 06:48:25,146 INFO No packages found that can be upgraded unattended and no pending auto-removals
+2022-10-25 06:49:31,826 INFO Checking if system is running on battery is skipped. Please install powermgmt-base package to check power status and skip installing updates when the system is running on battery.
+2022-10-25 06:49:31,921 INFO Starting unattended upgrades script
+2022-10-25 06:49:31,923 INFO Allowed origins are: origin=Debian,codename=bullseye,label=Debian, origin=Debian,codename=bullseye,label=Debian-Security, origin=Debian,codename=bullseye-security,label=Debian-Security
+2022-10-25 06:49:31,925 INFO Initial blacklist: 
+2022-10-25 06:49:31,926 INFO Initial whitelist (not strict): 
+2022-10-25 06:49:32,714 ERROR An error occurred: [Errno 8] Exec format error: 'uname'
+Traceback (most recent call last):
+  File "/bin/unattended-upgrade", line 1993, in main
+    res = run(options, rootdir, mem_log, logfile_dpkg,
+  File "/bin/unattended-upgrade", line 2134, in run
+    cache = UnattendedUpgradesCache(rootdir=rootdir)
+  File "/bin/unattended-upgrade", line 178, in __init__
+    self.running_kernel_pkgs_regexp = running_kernel_pkgs_regexp()
+  File "/bin/unattended-upgrade", line 741, in running_kernel_pkgs_regexp
+    running_kernel_version = subprocess.check_output(
+  File "/usr/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/usr/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.9/subprocess.py", line 1823, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+OSError: [Errno 8] Exec format error: 'uname'
+2022-10-25 06:49:33,552 INFO Checking if system is running on battery is skipped. Please install powermgmt-base package to check power status and skip installing updates when the system is running on battery.
+2022-10-25 06:49:33,636 INFO Starting unattended upgrades script
+2022-10-25 06:49:33,639 INFO Allowed origins are: origin=Debian,codename=bullseye,label=Debian, origin=Debian,codename=bullseye,label=Debian-Security, origin=Debian,codename=bullseye-security,label=Debian-Security
+2022-10-25 06:49:33,640 INFO Initial blacklist: 
+2022-10-25 06:49:33,642 INFO Initial whitelist (not strict): 
+2022-10-25 06:49:34,438 ERROR An error occurred: [Errno 8] Exec format error: 'uname'
+Traceback (most recent call last):
+  File "/bin/unattended-upgrade", line 1993, in main
+    res = run(options, rootdir, mem_log, logfile_dpkg,
+  File "/bin/unattended-upgrade", line 2134, in run
+    cache = UnattendedUpgradesCache(rootdir=rootdir)
+  File "/bin/unattended-upgrade", line 178, in __init__
+    self.running_kernel_pkgs_regexp = running_kernel_pkgs_regexp()
+  File "/bin/unattended-upgrade", line 741, in running_kernel_pkgs_regexp
+    running_kernel_version = subprocess.check_output(
+  File "/usr/lib/python3.9/subprocess.py", line 424, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+  File "/usr/lib/python3.9/subprocess.py", line 505, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/usr/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/usr/lib/python3.9/subprocess.py", line 1823, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+OSError: [Errno 8] Exec format error: 'uname'

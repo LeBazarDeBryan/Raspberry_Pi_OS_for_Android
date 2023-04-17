@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libfstrm.so.0.1.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libfstrm0
+/usr/share/doc/libfstrm0/README.md
+/usr/share/doc/libfstrm0/changelog.Debian.armhf.gz
+/usr/share/doc/libfstrm0/changelog.Debian.gz
+/usr/share/doc/libfstrm0/changelog.gz
+/usr/share/doc/libfstrm0/copyright
+/usr/lib/arm-linux-gnueabihf/libfstrm.so.0

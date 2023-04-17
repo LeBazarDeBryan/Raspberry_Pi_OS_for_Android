@@ -1,0 +1,13 @@
+initscripts: script-calls-init-script-directly ./etc/network/if-up.d/mountnfs:102
+initscripts: no-upstream-changelog
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/bootlogs: required-start
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/killprocs: required-start
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/checkfs.sh: required-start
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/motd: required-start
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/umountnfs.sh: required-stop
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/reboot: required-stop
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/mountall.sh: required-start
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/checkroot.sh: required-start
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/umountfs: required-stop
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/mountnfs.sh: required-start
+initscripts: init.d-script-missing-dependency-on-remote_fs etc/init.d/halt: required-stop

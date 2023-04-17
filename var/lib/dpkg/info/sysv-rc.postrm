@@ -1,0 +1,24 @@
+#! /bin/sh
+#
+# sysv-rc postrm
+#
+
+set -e
+
+case "$1" in
+	remove) : ;;
+	purge)
+	    if [ -e /usr/share/debconf/confmodule ]; then
+		. /usr/share/debconf/confmodule
+		db_purge
+	    fi
+	    exit 0
+	    ;;
+	*) exit 0 ;;
+esac
+
+umask 022
+
+
+
+exit 0

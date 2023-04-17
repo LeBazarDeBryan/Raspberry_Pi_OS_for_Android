@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/bin
+/usr/bin/banner
+/usr/share
+/usr/share/doc
+/usr/share/doc/sysvbanner
+/usr/share/doc/sysvbanner/changelog.Debian.gz
+/usr/share/doc/sysvbanner/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/banner.1.gz
+/usr/bin/sysvbanner
+/usr/share/man/man1/sysvbanner.1.gz

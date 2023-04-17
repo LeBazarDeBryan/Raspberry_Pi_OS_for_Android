@@ -1,0 +1,5 @@
+6ef2a69cdeb50876aa9210f3626e50fc  usr/lib/arm-linux-gnueabihf/libcairo-gobject.so.2.11600.0
+1cf1c437c29e351a59f5fb7b411cda4f  usr/share/doc/libcairo-gobject2/changelog.Debian.gz
+c469214872b9c2f3b8faa436381c5fbc  usr/share/doc/libcairo-gobject2/changelog.gz
+b9b1344c946b42f2a38204816db47dc1  usr/share/doc/libcairo-gobject2/copyright
+47464ab1fd401b17724f2d331403afa8  usr/share/lintian/overrides/libcairo-gobject2

@@ -1,0 +1,2 @@
+tcl-tclreadline: non-dev-pkg-with-shlib-symlink
+tcl-tclreadline: package-name-doesnt-match-sonames

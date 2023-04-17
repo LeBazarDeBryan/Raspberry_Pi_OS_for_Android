@@ -1,0 +1,9 @@
+auto
+/usr/bin/vncserver
+vncserver.1.gz
+/usr/share/man/man1/vncserver.1.gz
+
+/usr/bin/tigervncserver
+80
+/usr/share/man/man1/tigervncserver.1.gz
+

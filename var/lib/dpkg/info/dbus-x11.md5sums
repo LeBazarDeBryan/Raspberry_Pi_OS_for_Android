@@ -1,0 +1,9 @@
+c6d30f8afef5ee33081f744c775e6b5d  usr/bin/dbus-launch
+38a717139fa82e8d2c85a53bb8cba0de  usr/share/doc/dbus-x11/AUTHORS.gz
+b1f79bf118c81237ef19e97f5e74d707  usr/share/doc/dbus-x11/NEWS.gz
+c2ccbf47bb6c6ee6f5154a89863ade80  usr/share/doc/dbus-x11/README.gz
+e2259dd46dda5348647bec39a36a7514  usr/share/doc/dbus-x11/changelog.Debian.gz
+a46dbfafef4a76ece7bf07172be7c116  usr/share/doc/dbus-x11/changelog.gz
+8caeab292befe4a6ffc224d0ab0e87db  usr/share/doc/dbus-x11/copyright
+803663c38d276a2ba59eb2e32afa07d3  usr/share/lintian/overrides/dbus-x11
+f7b20f01a89907a673a6a0e06eced1c6  usr/share/man/man1/dbus-launch.1.gz

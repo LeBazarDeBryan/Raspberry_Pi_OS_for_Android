@@ -1,0 +1,4 @@
+ce402b521045f6b7f3771bfddd51b895  usr/lib/arm-linux-gnueabihf/libbson-1.0.so.0.0.0
+df97553fb03f27bcc33dc26aedbd956e  usr/share/doc/libbson-1.0-0/changelog.Debian.gz
+03277ad357f796f65259e390b808cfd9  usr/share/doc/libbson-1.0-0/copyright
+95acebc77cf4394fa0aaf2c2a38058ac  usr/share/lintian/overrides/libbson-1.0-0

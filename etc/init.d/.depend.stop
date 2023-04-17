@@ -1,0 +1,2 @@
+TARGETS = urandom killprocs unattended-upgrades ssh xrdp avahi-daemon lighttpd pihole-FTL android-raspbian-status inetutils-syslogd
+inetutils-syslogd: ssh xrdp lighttpd pihole-FTL android-raspbian-status

@@ -1,0 +1,5 @@
+0e41a20698bd46ee46408212d4616f0c  usr/sbin/unbound-anchor
+6f29b69b314f0a8e3cf64932aaea137f  usr/share/doc/unbound-anchor/changelog.Debian.gz
+a419179537e7835f9585cbc5d641bcad  usr/share/doc/unbound-anchor/changelog.gz
+a466482a9b43fe730579687fdf9785e3  usr/share/doc/unbound-anchor/copyright
+dab547965365fee9c0ed05018c8b3fd3  usr/share/man/man8/unbound-anchor.8.gz

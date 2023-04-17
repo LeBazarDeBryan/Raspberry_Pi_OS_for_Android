@@ -1,0 +1,7 @@
+9ce18a112b934abe8208e550226e254c  usr/bin/php-cgi7.4
+9ce18a112b934abe8208e550226e254c  usr/lib/cgi-bin/php7.4
+d41d8cd98f00b204e9800998ecf8427e  usr/lib/php/7.4/sapi/cgi
+23378a50f744ba66a0d2533215fcae33  usr/share/bug/php7.4-cgi/control
+5474b88f45d78652fb691bd128645cc6  usr/share/bug/php7.4-cgi/script
+ee1c8f43e5143c8a5388f3ae19fc820a  usr/share/lintian/overrides/php7.4-cgi
+34cffc1c62bdd3abbb75d89b07872008  usr/share/man/man1/php-cgi7.4.1.gz

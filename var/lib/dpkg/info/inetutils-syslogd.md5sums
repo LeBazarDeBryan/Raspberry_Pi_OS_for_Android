@@ -1,0 +1,9 @@
+db9653754047e4aabb5a4bee83471b79  usr/sbin/syslogd
+240d0e72aa9bcfe731a19787bf394cd1  usr/share/doc/inetutils-syslogd/AUTHORS
+a7302459804435269c22170455528334  usr/share/doc/inetutils-syslogd/NEWS.gz
+5f6380418559c09db306ae9762568a2f  usr/share/doc/inetutils-syslogd/THANKS
+2e9f8bf58e094f5ecb9a81e1b3368cd2  usr/share/doc/inetutils-syslogd/changelog.Debian.gz
+a7f975c2ca05b5328cabfd4887a86546  usr/share/doc/inetutils-syslogd/changelog.gz
+03c39402ddda7a755f392aa3ae50c728  usr/share/doc/inetutils-syslogd/copyright
+dcefd32854027d94bd904c4581dd5497  usr/share/man/man5/syslog.conf.5.gz
+de20d8f3faa3cbf61b1cb35e67cc25d6  usr/share/man/man8/syslogd.8.gz

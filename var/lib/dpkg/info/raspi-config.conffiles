@@ -1,0 +1,2 @@
+/etc/init.d/raspi-config
+/etc/sudoers.d/010_proxy

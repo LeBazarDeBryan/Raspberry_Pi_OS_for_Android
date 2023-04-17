@@ -1,0 +1,16 @@
+This package was first debianized by Joe Oppegaard <joe@pidone.org> on
+Mon,  1 Mar 2004 17:05:08 -0800.
+
+This package was downloaded from ftp://ftp.pidone.org/sysv-rc-conf
+
+www: http://sysv-rc-conf.sourceforge.net
+ftp: ftp://ftp.pidone.org/sysv-rc-conf
+
+Upstream Author: Joe Oppegaard <joe@pidone.org>
+
+This software is copyright (c) 2004 by Joe Oppegaard
+
+You are free to distribute this software under the terms of
+the GNU General Public License.
+On Debian systems, the complete text of the GNU General Public
+License can be found in the file `/usr/share/common-licenses/GPL'.

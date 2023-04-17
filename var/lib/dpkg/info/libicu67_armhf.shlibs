@@ -1,0 +1,7 @@
+libicudata 67 libicu67 (>= 67.1-1~)
+libicui18n 67 libicu67 (>= 67.1-1~)
+libicuio 67 libicu67 (>= 67.1-1~)
+libicutest 67 libicu67 (>= 67.1-1~)
+libicutu 67 libicu67 (>= 67.1-1~)
+libicuuc 67 libicu67 (>= 67.1-1~)
+#libiculx 67 libicu67 (>= 67.1-1~)

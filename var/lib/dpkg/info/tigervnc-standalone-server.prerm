@@ -1,0 +1,35 @@
+#!/bin/sh
+set -e
+
+bindir=/usr/bin
+sbindir=/usr/sbin
+mandir=/usr/share/man
+
+if [ "$1" = "remove" ] ; then
+  for tiger in tigervncserver Xtigervnc; do
+    notiger=`echo $tiger | sed -e 's/tiger//'`;
+    update-alternatives --remove $notiger $bindir/$tiger
+  done
+  for tiger in tigervncsession; do
+    notiger=`echo $tiger | sed -e 's/tiger//'`;
+    update-alternatives --remove $notiger $sbindir/$tiger
+  done
+elif [ "$1" = "upgrade" ] ; then
+  # Check for downgrade below 1.11.0
+  if dpkg --compare-versions "$2" lt-nl 1.11.0; then
+    for tiger in tigervncsession; do
+      notiger=`echo $tiger | sed -e 's/tiger//'`;
+      update-alternatives --remove $notiger $sbindir/$tiger
+    done
+  fi
+fi
+
+# Automatically added by dh_installdeb/13.3.4
+dpkg-maintscript-helper mv_conffile /etc/X11/Xvnc-session /etc/X11/Xtigervnc-session 1.10.1\+dfsg-9 -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/vnc.conf 1.10.1\+dfsg-9 -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/tigervnc/ecparams.pem 1.10.1\+dfsg-9 -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/tigervnc/ssleay.cnf 1.10.1\+dfsg-9 -- "$@"
+# End automatically added section
+
+
+exit 0

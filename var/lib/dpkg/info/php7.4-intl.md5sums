@@ -1,0 +1,5 @@
+0b4cd15ddb758c5254363193dba40a19  usr/lib/php/20190902/intl.so
+b4358047262260ffb316eb6c9459f16c  usr/share/bug/php7.4-intl/control
+7cfe10dea2277d69cd9752204981cbd6  usr/share/bug/php7.4-intl/script
+bb7199fd32cac1cdb75c2ee70654c43f  usr/share/lintian/overrides/php7.4-intl
+66dd72756634f83008541a4d4bce2342  usr/share/php7.4-intl/intl/intl.ini

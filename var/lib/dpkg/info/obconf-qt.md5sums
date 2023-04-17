@@ -1,0 +1,9 @@
+e5491e0d71fb23f98d390b98a1de6f88  usr/bin/obconf-qt
+aed66a7ece03332e65738ed24aaa6adf  usr/share/applications/obconf-qt.desktop
+255829c40e165ecaeafedda58e658081  usr/share/doc/obconf-qt/AUTHORS
+d89079dfb3144d107ff3a4aa64872e80  usr/share/doc/obconf-qt/README.md
+0bff2c52c8fbe68f70f6a2a250340c21  usr/share/doc/obconf-qt/changelog.Debian.gz
+e5459651d255d770cb99c58ea51913f9  usr/share/doc/obconf-qt/changelog.gz
+a4a278165282e18ea99784f125cbcf2c  usr/share/doc/obconf-qt/copyright
+8c63bca1acc8aff231abeb49fc5530d7  usr/share/icons/hicolor/48x48/apps/obconf-qt.png
+438f2b39a3ad6b305eda6f732e70bb1a  usr/share/lintian/overrides/obconf-qt

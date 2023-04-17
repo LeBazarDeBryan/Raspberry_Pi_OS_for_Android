@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installsystemd/13.3.4
+if [ -d /run/systemd/system ] && [ "$1" = remove ]; then
+	deb-systemd-invoke stop 'lighttpd.service' >/dev/null || true
+fi
+# End automatically added section
+# Automatically added by dh_installinit/13.3.4
+if [ -x "/etc/init.d/lighttpd" ] && [ "$1" = remove ]; then
+	invoke-rc.d --skip-systemd-native lighttpd stop || start_failed
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.3.4
+dpkg-maintscript-helper rm_conffile /etc/lighttpd/conf-available/10-access.conf 1.4.31-4 lighttpd -- "$@"
+# End automatically added section

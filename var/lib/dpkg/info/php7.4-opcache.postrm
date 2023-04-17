@@ -1,0 +1,55 @@
+#!/bin/sh
+
+set -e
+
+
+if [ "$1" = "remove" ]; then
+    if [ -e /usr/lib/php/php-maintscript-helper ] ; then
+	. /usr/lib/php/php-maintscript-helper
+
+	for dsoname in opcache; do
+	    php_invoke dismod 7.4 ALL ${dsoname}
+	done
+    fi
+fi
+
+if [ "$1" = "purge" ]; then
+    inidir=/etc/php/7.4/mods-available
+
+    for dsoname in opcache; do
+	inifile=${dsoname}.ini
+
+	for ext in '~' '%' .bak .ucf-new .ucf-old .ucf-dist;  do
+	    rm -f ${inidir}/${inifile}${ext}
+	done
+	rm -f ${inidir}/${inifile}
+	if which ucf >/dev/null; then
+	    ucf --purge ${inidir}/${inifile}
+	fi
+	if which ucfr >/dev/null; then
+	    ucfr --purge php7.4-opcache ${inidir}/${inifile}
+	fi
+
+	# Final cleanup of possible leftover symlinks
+	find /etc/php/ -type l | \
+	    while read symlink; do
+		if [ "$(readlink $symlink)" = "${inidir}/$inifile" ]; then
+		    rm -f "${symlink}"
+		fi
+	    done
+    done
+
+    for dir in \
+	/etc/php/7.4/mods-available \
+	/etc/php/7.4 \
+	/etc/php;
+    do
+	if [ -d $dir ]; then
+	    rmdir --ignore-fail-on-non-empty $dir
+	fi
+    done
+fi
+
+
+
+exit 0

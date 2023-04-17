@@ -1,0 +1,5 @@
+# 'ifne' is compiled with correct hardening compile and link options (e.g.
+# '-D_FORTIFY_SOURCE=2'), but still, lintian thinks 'ifne' is not hardened
+# enough.  As mentioned in #3673112, lintian sometimes has false positives,
+# thus this override:
+moreutils: hardening-no-fortify-functions usr/bin/ifne

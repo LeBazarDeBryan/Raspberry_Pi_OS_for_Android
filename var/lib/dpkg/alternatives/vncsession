@@ -1,0 +1,9 @@
+auto
+/usr/sbin/vncsession
+vncsession.8.gz
+/usr/share/man/man8/vncsession.8.gz
+
+/usr/sbin/tigervncsession
+80
+/usr/share/man/man8/tigervncsession.8.gz
+

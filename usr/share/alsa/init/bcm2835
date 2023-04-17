@@ -1,0 +1,21 @@
+# Configuration for Raspberry Pi internal audio device
+
+CARDINFO{driver}=="bcm2835_hdmi", \
+CARDINFO{mixername}=="Broadcom Mixer", \
+  GOTO="HDMI"
+CARDINFO{driver}=="bcm2835_headpho", \
+CARDINFO{mixername}=="Broadcom Mixer", \
+  GOTO="HP"
+RESULT="false", EXIT="return"
+ 
+LABEL="HDMI"
+# playback
+CTL{reset}="mixer"
+CTL{name}="HDMI Playback Volume", CTL{values}="0dB"
+RESULT="true", EXIT="return"
+
+LABEL="HP"
+# playback
+CTL{reset}="mixer"
+CTL{name}="Headphone Playback Volume", CTL{values}="0dB"
+RESULT="true", EXIT="return"

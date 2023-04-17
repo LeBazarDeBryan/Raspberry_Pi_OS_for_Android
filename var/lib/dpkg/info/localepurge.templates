@@ -1,0 +1,506 @@
+
+Template: localepurge/nopurge
+Type: multiselect
+Choices: ${locales}
+Description: Locale files to keep on this system:
+ The localepurge package will remove all locale files from the system
+ except those that you select here.
+ .
+ When selecting the locale corresponding to your language and country
+ code (such as "de_DE", "de_CH", "it_IT", etc.) it is recommended to
+ choose the two-character entry ("de", "it", etc.) as well.
+ .
+ Entries from /etc/locale.gen will be preselected
+ if no prior configuration has been successfully completed.
+Description-cs.UTF-8: Soubory locale, které mají v systému zůstat:
+ Balík localepurge odstraní ze systému všechny soubory locale kromě jazyků, které zde vyberete.
+ .
+ Při výběru locale odpovídající vašemu jazyku a kódu země (např. „cs_CZ“, „de_DE“, „de_CH“, apod.) doporučujeme vybrat i dvoupísmenný název („cs“, „de“, apod.).
+ .
+ Pokud jste ještě localepurge nenastavovali, standardně se předvyberou záznamy z /etc/locale.gen.
+Description-da.UTF-8: Sprogfiler der skal bevares på dette system:
+ Pakken localepurge fjerner alle andre lokaliseringsfiler (sprogunderstøttelser) end dem, du vælger nu.
+ .
+ Når du vælger loakliseringsindstillingen, der svarer til dit sprog og landekode (såsom »da_DK«, »sv_SV« »de_DE« etc.) så anbefales det også at vælge totegnselementet (»da«, »sv« »de« etc.).
+ .
+ Punkter fra /etc/locale.gen vil være valgt på forhånd hvis ingen tidligere konfiguration er afsluttet med succes.
+Description-de.UTF-8: Locale-Dateien, die auf diesem System verbleiben:
+ Das Paket »localepurge« wird alle Locale-Dateien außer denen, die Sie hier auswählen, vom System entfernen.
+ .
+ Beim Auswählen der zu Ihrer Sprache und Ihrem Ländercode gehörenden Locale (wie etwa »de_DE«, »de_CH«, »it_IT« etc.) empfiehlt es sich, auch den Zwei-Buchstaben-Eintrag (»de«, »it« etc.) zu wählen.
+ .
+ Einträge aus /etc/locale.gen werden vorausgewählt, falls noch keine frühere Konfiguration erfolgreich abgeschlossen wurde.
+Description-es.UTF-8: Archivos locale a mantener en este sistema:
+ El paquete localepurge eliminará todos los archivos locale del sistema excepto los que seleccione aquí.
+ .
+ Cuando seleccione el locale que corresponda a su idioma y código de país (por ejemplo: «es_ES», «es_AR», «en_US», etc.) es recomendable seleccionar también el código de idioma de dos caracteres («es», «en», etc.).
+ .
+ Se seleccionarán automáticamente los elementos presentes en «/etc/locale.gen» si no se completó correctamente una configuración con anterioridad.
+Description-eu.UTF-8: Lokala fitxategiak sisteman mantentzeko:
+ 'localepurge' paketeak lokala (l10n) arloko fitxategi guztiak sistematik kentzen ditu, zuk hautatu dituzunak izan ezik.
+ .
+ Nahi duzun hizkuntzaren eta herrialdearen kodeari dagokion lokala hautatzean (adibidez 'eu_ES', 'eu_FR', 'it_IT', e.a.) bi karakteretako sarrera ('eu', 'it', e.a.) aukeratzea gomendatzen da baita ere.
+ .
+ '/etc/locale.gen' fitxategiko sarrerak aurrez hautatuko dira aurreko konfiguraziorik ez bada ongi osatu.
+Description-fr.UTF-8: ParamÃštres rÃ©gionaux Ã  garder sur ce systÃšmeÂ :
+ Le paquet localepurge supprimera du systÃšme tous les fichiers de paramÃštres rÃ©gionaux (Â«Â localesÂ Â») Ã  l'exception de ceux choisis ici.
+ .
+ Si vous choisissez des paramÃštres rÃ©gionaux comportant Ã  la fois une mention de langue et de pays (tels que Â«Â fr_FRÂ Â» ou Â«Â de_DEÂ Â», etc.), il est recommandÃ© de choisir Ã©galement l'entrÃ©e comportant la mention de la langue seule (comme Â«Â frÂ Â» ou Â«Â deÂ Â»).
+ .
+ Les entrÃ©es mentionnÃ©es dans /etc/locale.gen sont prÃ©sÃ©lectionnÃ©es si aucune configuration n'a dÃ©jÃ  Ã©tÃ© rÃ©alisÃ©e.
+Description-it.UTF-8: File di localizzazione da conservare su questo sistema:
+ Il pacchetto localepurge rimuoverà tutti i file di localizzazione dal sistema tranne quelli selezionati qui.
+ .
+ Quando si seleziona la localizzazione corrispondente alla propria lingua e al proprio codice di paese (come «de_DE», «de_CH», «it_IT», ecc.) si raccomanda di scegliere anche la voce a due caratteri («de», «it», ecc.).
+ .
+ Se non è stata completata con successo alcuna configurazione precedente, le voci in /etc/locale.gen verranno preselezionate.
+Description-ja.UTF-8: このシステムに残すロケールファイル:
+ localepurge はここで選択した言語コード以外の全てのロケールファイルを削除します。
+ .
+ 言語及び国コード (「de_DE」や「de_CH」、「it_IT」等) の選択時、「de」や「it」といった二文字項目 (「de」や「it」等) を同様に選択することを推奨します。
+ .
+ 以前に設定がうまく完了していない限り /etc/locale.gen のエントリがあらかじめ選択されます。
+Description-nl.UTF-8: Lokalisatiebestanden die u wilt behouden op dit systeem:
+ Het pakket localepurge verwijdert alle lokalisatiebestanden van dit systeem op uitzondering van die welke u hier selecteert.
+ .
+ Bij de keuze van de taaldefinitie die beantwoordt aan uw taal en landcode (zoals "de_DE", "de_CH", "it_IT", enz.), is het aanbevolen om ook de overeenkomstige taaldefinitie bestaande uit twee letters ("de", "it", enz.) te kiezen.
+ .
+ Indien er nog geen voorafgaande selectie met succes werd voltooid, zullen de gegevens uit /etc/locale.gen als keuzemogelijkheden aangeboden worden.
+Description-pl.UTF-8: Zachowywane pliki tłumaczeń:
+ Pakiet localepurge usunie z systemu wszystkie pliki tłumaczeń poza wybranymi w tym oknie.
+ .
+ Przy wybieraniu tłumaczeń odnoszących się do kodu języka i kraju (np. "de_DE", "de_CH", "it_IT" itp.) zaleca się wybranie również wpisu dwuznakowego (np. "de", "it" itp.).
+ .
+ Wpisy z /etc/locale.gen zostaną wybrane domyślnie, jeśli wcześniej nie wykonano żadnej poprawnej konfiguracji.
+Description-pt.UTF-8: Ficheiros de "locale" a manter neste sistema:
+ O pacote localepurge irá remover todos os ficheiros de "locale" do sistema à excepção daqueles que você seleccionar aqui.
+ .
+ Quando seleccionar o locale correspondente à sua linguagem e código de país (tal como "de_DE", "de_CH", "it_IT", etc.) é recomendado escolher também a entrada de dois caracteres (("de", "it", "pt", etc.).
+ .
+ As entradas de /etc/locale.gen irão ser pre-seleccionadas se nenhuma configuração anterior tiver sido completada com sucesso.
+Description-pt_BR.UTF-8: Arquivos de locale para manter neste sistema:
+ O pacote localepurge removerá todos os arquivos de locale do sistema, exceto aqueles que você selecionar aqui.
+ .
+ Quando você selecionar o locale correspondente ao seu idioma e código de país (tal como "de_DE", "de_CH", "it_IT", etc.), é recomendado escolher a entrada com dois caracteres ("de", "it", etc.) também.
+ .
+ Entradas de /etc/locale.gen serão pré-selecionadas se nenhuma configuração anterior tiver sido completada com sucesso.
+Description-ru.UTF-8: Файлы локалей, которые нужно оставить в системе:
+ Пакет localepurge удалит все файлы локалей из системы, за исключением выбранных.
+ .
+ При выборе своей локали на основе кодов языка и страны (например, «de_DE», «de_CH», «it_IT» т.д.) рекомендуется также выбирать и локаль, обозначаемую двумя символами («de», «it» и т.д.).
+ .
+ Записи из /etc/locale.gen уже будут выбранными, если предыдущая настройка не была завершена.
+Description-sk.UTF-8: Lokalizačné súbory na ponechanie v systéme:
+ Balík localepurge odstráni zo systému všetky lokalizačné súbory, okrem tých, ktoré tu vyberiete.
+ .
+ Pri výbere lokalizačných súborov príslušných kódu svojho jazyka a krajiny (napr. „sk_SK”, „cs_CZ” apod.) odporúčame zvoliť aj dvojznakovú položku („sk”, „cs” apod.).
+ .
+ Položky z /etc/locale.gen budú predvybrané, ak ešte nebolo úspešne dokončené predošlé nastavenie.
+Description-sv.UTF-8: Lokalanpassningsfiler som ska sparas på detta system:
+ Paketet localepurge kommer att ta bort alla lokalanpassningsfiler utom de du anger här.
+ .
+ När lokalspecifikationen som väljs innehåller båda lands- och språkkod (exempelvis: "sv_FI", "de_DE", "de_CH" etc) rekomenderas det at även den enkla språkkoden ("sv", "de" etc) anges.
+ .
+ Val från /etc/locale-gen kommer att vara förvalda om ingen tidigare komplett inställning har gjorts.
+
+Template: localepurge/use-dpkg-feature
+Type: boolean
+Default: true
+Description: Use dpkg --path-exclude?
+ dpkg supports --path-exclude and --path-include options to filter files
+ from packages being installed.
+ .
+ Please see /usr/share/doc/localepurge/README.dpkg-path for more
+ information about this feature. It can be enabled (or disabled)
+ later by running "dpkg-reconfigure localepurge".
+ .
+ This option will become active for packages
+ unpacked after localepurge has been (re)configured. Packages
+ installed or upgraded together with localepurge may (or may not) be
+ subject to the previous configuration of localepurge.
+Description-cs.UTF-8: Použít dpkg --path-exclude?
+ dpkg podporuje volby --path-exclude a --path-include, které souží pro odklonění souborů z instalovaoných balíků.
+ .
+ Více informací o této možnosti naleznete v /usr/share/doc/localepurge/README.dpkg-path. Později ji můžete zapnout (nebo vypnout) příkazem „dpkg-reconfigure localepurge“.
+ .
+ Tato volba začne fungovat až pro balíky, které se rozbalí po (re)konfiguraci localepurge. U balíků instalovaných nebo aktualizovaných v tomto sezení společně s localepurge závisí, zda budou rozbaleny až po této otázce.
+Description-da.UTF-8: brug dpkg --path-exclude?
+ dpkg understøtter tilvalgene --path-exclude og --path-include til at filtrere filer fra pakker, der installeres.
+ .
+ Se venligst /usr/share/doc/localepurge/README.dpkg-path for yderligere information om denne funktion. Den kan aktiveres (eller deaktiveres) senere ved at køre »dpkg-reconfigure localepurge«.
+ .
+ Denne indstilling vil blive aktiv for pakker udpakket efter at localepurge er blevet (om)konfigureret. Pakker installeret eller opgraderet sammen med localepurge vil (eller vil ikke) være omfattet af den tidligere konfiguration af localepurge.
+Description-de.UTF-8: Benutze dpkg --path-exclude?
+ »dpkg« unterstützt die Optionen --path-exclude und --path-include, um Dateien aus installierten Paketen zu filtern.
+ .
+ Siehe /usr/share/doc/localepurge/README.dpkg-path für weitere Informationen zu dieser Funktionalität. Es kann mittels »dpkg-reconfigure localepurge« nachträglich aktiviert (oder deaktiviert) werden.
+ .
+ Diese Option wird für Pakete aktiv, die nach der (erneuten) Konfiguration von Localepurge entpackt werden. Pakete, deren Installation oder Upgrade zusammen mit Localepurge erfolgt, könnten der vorherigen Konfiguration von Localepurge unterliegen (oder nicht).
+Description-es.UTF-8: ¿Desea utilizar «dpkg --path-exclude»?
+ dpkg permite las opciones «--path-exclude» y «--path-include» para filtrar archivos de los paquetes que instale.
+ .
+ Revise «/usr/share/doc/localepurge/README.dpkg-path» para más información sobre esta funcionalidad. Puede activarla (o desactivarla) más adelante ejecutando «dpkg-reconfigure localepurge».
+ .
+ Se aplicará esta opción en aquellos paquetes desempaquetados después de que se configure (o reconfigure) localepurge. Los paquetes instalados o actualizados junto con localepurge pueden (o no) estar sujetos a la configuración anterior de localepurge.
+Description-eu.UTF-8: 'dpkg --path-exclude' erabili?
+ 'dpkg' tresnak '--path-exclude' eta '--path-include' aukerak onartzen ditu instalatzen ari diren paketeetatik fitxategiak iragazteko.
+ .
+ Irakurri '/usr/share/doc/localepurge/README.dpkg-path' eginbide honi buruzko informazio gehiago lortzeko. 'dpkg-reconfigure localepurge' komandoa exekutatuz beranduago gaitu (edo desgaitu) daiteke.
+ .
+ Aukera hau aktibo bihurtuko da localepurge (bir)konfiguratu ondoren deskonprimitutako paketeentzako. localepurge-rekin batera instalatutako edo bertsio-berritutako paketeak localepurge-ren aurreko konfigurazioen ondorioak jasan dezakete (edo ez).
+Description-fr.UTF-8: Faut-il utiliser Â«Â dpkg --path-excludeÂ Â»Â ?
+ Le programme dpkg gÃšre les options --path-exclude et --path-include pour filtrer les fichiers Ã  installer quand des paquets sont installÃ©s.
+ .
+ Veuillez consulter le fichier /usr/share/doc/localepurge/README.dpkg-path pour plus d'informations sur cette fonctionnalitÃ©. Elle peut Ãªtre activÃ©e ou dÃ©sactivÃ©e ultÃ©rieurement avec la commande Â«Â dpkg-reconfigure localepurgeÂ Â».
+ .
+ Cette option ne sera active que pour les paquets installÃ©s aprÃšs la (re)configuration de localepurge. Les paquets installÃ©s ou mis Ã  jour en mÃªme temps que localepurge peuvent, selon les cas, Ãªtre affectÃ©s ou non par la configuration antÃ©rieure de localepurge.
+Description-it.UTF-8: Usare dpkg --path-exclude?
+ dpkg gestisce le opzioni --path-exclude e --path-include per filtrare i file dai pacchetti che vengono installati.
+ .
+ Vedere /usr/share/doc/localepurge/README.dpkg-path per maggiori informazioni su questa funzionalità. Può essere abilitata (o disabilitata) successivamente eseguendo «dpkg-reconfigure localepurge».
+ .
+ Questa opzione diventerà attiva per i pacchetti che vengono spacchettati dopo la (ri)configurazione di localepurge. I pacchetti installati o aggiornati insieme a localepurge possono (o meno) essere trattati in base alla configurazione precedente di localepurge.
+Description-ja.UTF-8: dpkg --path-exclude を使いますか?
+ dpkg は --path-exclude と --path-include オプションを利用した、インストールされているパッケージのファイルの絞り込みをサポートしています。
+ .
+ この機能のさらなる情報については /usr/share/doc/localepurge/README.dpkg-path を見てください。後で「dpkg-reconfigure localepurge」を実行することで有効化 (または無効化) することができます。
+ .
+ このオプションは localepurge の(再)設定後に展開されたパッケージに対して有効になります。localepurge と同時にインストールまたはアップグレードされたパッケージは localepurge の以前の設定の対象となるかもしれません (ならないかもしれません)。
+Description-nl.UTF-8: Gebruik maken van dpkg --path-exclude?
+ dpkg ondersteunt de opties --path-exclude en --path-include om bestanden te filteren van pakketten die geïnstalleerd worden.
+ .
+ Raadpleeg het bestand /usr/share/doc/localepurge/README.dpkg-path voor bijkomende informatie over deze functionaliteit. Die functionaliteit kan ook later geactiveerd (of uitgezet) worden met de opdracht "dpkg-reconfigure localepurge".
+ .
+ Deze optie zal actief zijn voor pakketten die nog niet uitgepakt waren op het ogenblik dat localepurge (opnieuw) geconfigureerd werd. Pakketten die samen met localepurge geïnstalleerd of opgewaardeerd worden, kunnen wel of niet overeenkomstig de eerdere configuratie van localepurge afgehandeld worden.
+Description-pl.UTF-8: Użyć dpkg --path-exclude?
+ Program dpkg obsługuje opcje --path-exclude i --path-include do filtrowania plików z zainstalowanych pakietów.
+ .
+ Proszę zapoznać się z plikiem /usr/share/doc/localepurge/README.dpkg-path aby dowiedzieć się więcej o tej funkcji. Można ją później włączyć (lub wyłączyć) za pomocą polecenia "dpkg-reconfigure localepurge".
+ .
+ Opcja ta stanie się aktywna w przypadku pakietów rozpakowanych po (re)konfiguracji localepurge. Pakietów instalowanych lub aktualizowanych razem z localepurge może (lub nie) dotyczyć poprzednia konfiguracja localepurge.
+Description-pt.UTF-8: Usar dpkg --path-exclude?
+ O dpkg suporta as opções --path-exclude e --path-include para filtrar ficheiros dos pacotes ao serem instalados.
+ .
+ Por favor veja /usr/share/doc/localepurge/README.dpkg-path para mais informações acerca desta funcionalidade. Ela pode ser activada (ou desactivada) mais tarde ao correr "dpkg-reconfigure localepurge".
+ .
+ Esta opção irá tornar-se activa para pacotes desempacotados após o localepurge ter sido (re)configurado. Os pacotes instalados ou actualizados juntamente com o localepurge podem ser (ou podem não ser) sujeitos à configuração anterior do localepurge.
+Description-pt_BR.UTF-8: Usar dpkg --path-exclude?
+ O dpkg suporta as opções --path-exclude e --path-include para filtrar arquivos de pacotes sendo instalados.
+ .
+ Por favor, veja /usr/share/doc/localepurge/README.dpkg-path para mais informações sobre essa funcionalidade. Ela pode ser habilitada (ou desabilitada) posteriormente executando "dpkg-reconfigure localepurge".
+ .
+ Essa opção se tornará ativa para pacotes desempacotados depois do localepurge ter sido (re)configurado. Pacotes instalados ou atualizados juntamente com o localepurge poderão (ou não) ser afetados pela configuração anterior do localepurge.
+Description-ru.UTF-8: Использовать dpkg --path-exclude?
+ Для фильтрации файлов устанавливаемых пакетов dpkg поддерживает параметры --path-exclude и --path-include.
+ .
+ Дополнительную информацию об этой возможности смотрите в /usr/share/doc/localepurge/README.dpkg-path. Её можно включить (или отключить) позднее с помощью команды «dpkg-reconfigure localepurge».
+ .
+ Эта возможность станет действовать только для пакетов, распакованных после (пере)настройки localepurge. К пакетами, установленным или обновлённым одновременно с localepurge, может (или нет) примениться предыдущая настройка localepurge.
+Description-sk.UTF-8: Použiť dpkg --path-exclude?
+ dpkg podporuje na filtrovanie súborov z inštalovaných balíkov voľby --path-exclude a --path-include.
+ .
+ Prosím, ďalšie informácie o tejto vlastnosti si prečítajte v /usr/share/doc/localepurge/README.dpkg-path. Môžete ju zapnúť (alebo vypnúť) aj neskôr, spustením „dpkg-reconfigure localepurge”.
+ .
+ Táto voľba sa stane aktívnou pre balíky rozbalené po tom, ako bol localepurge nastavený. Balíky nainštalované alebo aktualizované spolu s localepurge môžu (alebo nemusia) byť predmetom predošlého nastavenia balíka localepurge.
+Description-sv.UTF-8: Ska dpkg --path-exclude användas?
+ dpkg har stöd för flaggorna --path-exclude och --path-include för att filtrera ut filer från paket som håller på att installeras.
+ .
+ Läsa /usr/share/doc/localepurge/README.dpkg-path för mer information om denna funktion. Den kan aktiveras senare (eller avaktiveras) genom att köra "dpkg-reconfigure localepurge".
+ .
+ Detta alternativ kommer att aktiveras för paket som packas upp efter att localepurge installerats och fått kompletta inställningar. Paket som installeras och uppgraderas tillsammans med localepurge omfattas inte av eventuellt ändrad inställning av localepurge.
+
+Template: localepurge/none_selected
+Type: boolean
+Default: false
+Description: Really remove all locales?
+ No locale has been chosen for being kept. This means that all locales will be
+ removed from this system. Please confirm whether this is really your
+ intent.
+Description-cs.UTF-8: Opravdu odstranit všechny locales?
+ Vybrali jste, že nechcete ponechat žádné locales. To znamená, že budou ze systému odstraněny všechny locales. Jste si jisti, že tomu tak chcete?
+Description-da.UTF-8: Skal samtlige lokaliseringer (sprogunderstøttelser) virkelig fjernes?
+ Du har valgt ikke at bevare nogen lokaliseringer (sprog). Det betyder at, alle lokaliseringer vil blive fjernet fra dit system. Er du sikker på, at det er korrekt?
+Description-de.UTF-8: Wirklich alle Locales entfernen?
+ Es sollen keine Locales behalten werden. Das bedeutet, dass alle Locales von diesem System entfernt werden. Bitte bestätigen Sie, dass Sie das wirklich wollen.
+Description-es.UTF-8: ¿Realmente desea eliminar todos los locales?
+ Ha seleccionado no mantener ningún locale. Esto significa que se eliminarántodas los locales de su sistema. Confirme que esto es lo que desea.
+Description-eu.UTF-8: Benetan lokala guztiak ezabatu?
+ Ez da lokalarik mantentzeko aukeratu. Sistematik lokala guztiak kenduko direla adierazten du honek. Berretsi ezazu hori benetan egitea nahi duzula.
+Description-fr.UTF-8: Faut-il vraiment supprimer tous les paramÃštres rÃ©gionauxÂ ?
+ Vous avez choisi de ne pas garder de fichier de paramÃštres rÃ©gionaux. Cela signifie que tous les fichiers seront supprimÃ©s du systÃšme. Veuillez confirmer cette action.
+Description-it.UTF-8: Rimuovere veramente tutte le localizzazioni?
+ Non è stata selezionata alcuna localizzazione da conservare. Ciò significa che tutte le localizzazioni verranno rimosse dal sistema. Confermare che questo è realmente ciò che si vuole fare.
+Description-ja.UTF-8: 本当に全てのロケールを削除しますか？
+ どのロケールの維持も選択されませんでした。これは、全てのロケールをこのシステムから削除することを意味します。本当にそういう意図なのか確認してください。
+Description-nl.UTF-8: Bent u zeker dat u alle taaldefinities wilt verwijderen?
+ U heeft er voor gekozen om geen enkele taaldefinitie te behouden. Bijgevolg zullen alle taaldefinities van uw systeem verwijderd worden. Bent u zeker dat dit is wat u wilt?
+Description-pl.UTF-8: Na pewno usunąć wszystkie tłumaczenia?
+ Nie wybrano żadnych tłumaczeń do zachowania. Oznacza to, że wszystkie zostaną usunięte z systemu. Proszę potwierdzić, że takiego działania oczekiwano.
+Description-pt.UTF-8: De certeza que quer remover todos os locales?
+ Nenhum "locale" foi escolhido para ser mantido. Isto significa que todos os locales serão removidos do seu sistema. Por favor confirme que é mesmo esta a sua intenção.
+Description-pt_BR.UTF-8: Realmente remover todos os locales?
+ Nenhum locale foi escolhido para ser mantido. Isso significa que todos os locales serão removidos deste sistema. Por favor, confirme se essa é realmente a sua intenção.
+Description-ru.UTF-8: Действительно удалить все локали?
+ Вы не выбрали ни одной локали для сохранения. Это означает, что все локали будут удалены из системы. Подтвердите, что вы действительно хотите этого.
+Description-sk.UTF-8: Naozaj odstrániť všetky lokalizačné súbory?
+ Nevybrali ste žiadne lokalizácie, ktoré majú byť v systéme ponechané. To znamená, že zo systému budú odstránené všetky lokalizačné súbory. Prosím, potvrďte, že je to naozaj váš zámer?
+Description-sv.UTF-8: Ta bort alla lokalanpassningsfiler?
+ Du har valt att inte behålla några lokalanpassningar alls. Det betyder att alla lokalanpassingar på ditt system kommer att tas bort. Är detta verkligen det du vill?
+
+Template: localepurge/remove_no
+Type: note
+Description: No localepurge action until the package is configured
+ The localepurge package will not be useful until it has been successfully
+ configured using the command "dpkg-reconfigure localepurge". The
+ configured entries from /etc/locale.gen of the locales package will then
+ be automatically preselected.
+Description-cs.UTF-8: Žádná akce, dokud nenastavíte balík localepurge
+ Balík localepurge nebude provádět nic užitečného dokud jej úspěšně nenastavíte příkazem „dpkg-reconfigure localepurge“. Vybrané položky z /etc/locale.gen pak budou automaticky předvybrány.
+Description-da.UTF-8: Ingen localepurgehandling før pakken er konfigureret
+ localepurge vil ikke være nyttig, før du har sat den op med kommandoen »dpkg-reconfigure localepurge«. De valgte sprogindstillinger fra locale-pakkens /etc/locale.gen vil være forvalgt.
+Description-de.UTF-8: Keine Aktionen von Localepurge, bis das Paket konfiguriert ist
+ Das Paket »localepurge« ist nicht nützlich, bis es erfolgreich mit dem Befehl »dpkg-reconfigure localepurge« eingerichtet worden ist. Die konfigurierten Einträge aus /etc/locale.gen des Pakets »locales« werden dann automatisch vorausgewählt.
+Description-es.UTF-8: Ninguna acción de localepurge hasta que se configure el paquete
+ El paquete localepurge no será útil hasta que lo haya configurado correctamente con «dpkg-reconfigure localepurge». Se preseleccionarán automáticamente los elementos presentes en «/etc/locale.gen» del paquete locales.
+Description-eu.UTF-8: Ez dago localepurge-ren ekintzarik paketea konfiguratu arte
+ 'localepurge' paketea ez da erabilgarria izango 'dpkg-reconfigure localepurge' komandoarekin ongi konfiguratu arte. 'locales' paketeko '/etc/locale.gen' fitxategian konfiguratuta dauden sarrerak automatikoki aurrez hautatuko dira.
+Description-fr.UTF-8: Pas d'action de localepurge tant que le paquet n'est pas configurÃ©
+ Localepurge ne fera rien tant qu'il n'aura pas Ã©tÃ© correctement configurÃ© avec la commande Â«Â dpkg-reconfigure localepurgeÂ Â». Les entrÃ©es configurÃ©es dans /etc/locale.gen par le paquet locales seront alors automatiquement prÃ©sÃ©lectionnÃ©es.
+Description-it.UTF-8: Nessuna azione di localepurge fino a che il pacchetto non sarà configurato.
+ Il pacchetto localepurge non sarà utile fino a che non verrà configurato con successo con il comando «dpkg-reconfigure localepurge». Le voci configurate in /etc/locale.gen del pacchetto locales saranno allora automaticamente preselezionate.
+Description-ja.UTF-8: パッケージが設定されるまで localepurge は何も行いません
+ localepurge は「dpkg-reconfigure localepurge」を実行して正しく設定するまで有用に動作しません。locales パッケージにより設定された /etc/locale.gen にある項目があらかじめ自動的に選択されます。
+Description-nl.UTF-8: Er komt geen enkele activiteit vanwege localepurge zolang het pakket niet werd geconfigureerd
+ Het pakket localepurge is slechts nuttig eens u het met success geconfigureerd heeft (via het commando 'dpkg-reconfigure localepurge'). De in  /etc/locale.gen geconfigureerde keuzemogelijkheden zullen tot zolang automatisch voorgeselecteerd worden.
+Description-pl.UTF-8: Pakiet localepurge nie będzie działał do momentu jego skonfigurowania.
+ Pakiet localepurge nie będzie przydatny do momentu jego poprawnej konfiguracji za pomocą polecenia "dpkg-reconfigure localepurge". Zostaną wówczas automatycznie wybrane wstępnie skonfigurowane wpisy z /etc/locale.gen pakietu locales.
+Description-pt.UTF-8: Nenhuma acção do localepurge até que o pacote seja configurado
+ O pacote localepurge não será útil até que seja configurado com sucesso usando o comando "dpkg-reconfigure localepurge". As entradas configuradas de /etc/locale.gen do pacote locales serão pre-seleccionadas automaticamente.
+Description-pt_BR.UTF-8: Nenhuma ação do localepurge até que o pacote seja configurado
+ O pacote localepurge não será útil até que você o configure com sucesso usando o comando "dpkg-reconfigure localepurge". As entradas configuradas de /etc/locale.gen do pacote locales serão então automaticamente pré-selecionadas.
+Description-ru.UTF-8: Действие localepurge не применяется до настройки пакета
+ Пакет localepurge не заработает, пока не будет настроен с помощью команды «dpkg-reconfigure localepurge». Заданные элементы в /etc/locale.gen из пакета locales будут выбраны автоматически.
+Description-sk.UTF-8: Nebude vykonaná žiadna akcia localepurge, kým nebude balík nastavený
+ Balík localepurge nebude robiť nič užitočné, kým ho nenastavíte pomocou príkazu „dpkg-reconfigure localepurge”. Položky nastavené v /etc/locale.gen balíka locales budú použité ako predvolený výber.
+Description-sv.UTF-8: Ingen åtgärd från localepurge innan paketet fått kompletta inställningar
+ Paketet localepurge kommer inte att fungera innan du ställer in det med kommandot "dpkg-reconfigure localepurge". Inställningarna från /etc/locale.gen i locale-paketet kommer då att automatiskt förväljas.
+
+Template: localepurge/mandelete
+Type: boolean
+Default: true
+Description: Also delete localized man pages?
+ Based on the same locale information you chose, localepurge can also
+ delete localized man pages.
+Description-cs.UTF-8: Smazat také lokalizované manuálové stránky?
+ Na základě informací, které jste poskytli výše, může localepurge smazat i lokalizované manuálové stránky.
+Description-da.UTF-8: Skal lokaliserede manualsider også slettes?
+ Ud fra de lokaliseringsoplysninger, du har valgt, kan localepurge også fjerne overflødige oversatte manualsider.
+Description-de.UTF-8: Übersetzte Handbuchseiten auch löschen?
+ Aufgrund der von Ihnen ausgewählten Landeskennung kann Localepurge auch übersetzte Handbuchseiten entfernen.
+Description-es.UTF-8: ¿Desea eliminar también las páginas de manual en otros idiomas?
+ localepurge también puede eliminar las páginas de manual en los idioma que no haya decidido mantener en el apartado anterior.
+Description-eu.UTF-8: Lokalizatutako man orrialdeak ere ezabatu?
+ Aukeratu duzun lokalaren informazio berdinean oinarrituta, localepurge-k ere lokalizatutako 'man' orriak ezaba ditzake.
+Description-fr.UTF-8: Faut-il aussi supprimer les traductions des pages de manuelÂ ?
+ Ã partir des choix que vous venez d'effectuer, localepurge peut Ã©galement supprimer les traductions des pages de manuel.
+Description-it.UTF-8: Eliminare anche le pagine man tradotte?
+ Sulla base delle stesse informazioni sulle localizzazioni scelte, localepurge può anche eliminare le pagine man localizzate.
+Description-ja.UTF-8: ローカライズされた man ページも削除しますか？
+ 選択したロケール情報に基づいて、localepurge はローカライズされた man ページを削除できます。
+Description-nl.UTF-8: Wilt u ook gelokaliseerde man-pagina's verwijderen?
+ Zich baserend op uw lokalisatiekeuze kan localepurge ook gelokaliseerde man-pagina's verwijderen.
+Description-pl.UTF-8: Usunąć również przetłumaczone strony podręcznika systemowego?
+ W oparciu o te same informacje językowe które już wprowadzono, localepurge może usunąć także przetłumaczone strony podręcznika systemowego (man).
+Description-pt.UTF-8: Apagar também os manuais (man) "localizados"?
+ Baseado na mesma informação de locale que escolheu, o localepurge pode também apagar páginas de manuais localizadas.
+Description-pt_BR.UTF-8: Remover também páginas de manuais traduzidas?
+ Baseado nas mesmas informações de locale que você escolheu, o localepurge pode remover também páginas de manuais traduzidas.
+Description-ru.UTF-8: Удалить также переведённые справочные страницы?
+ На основе указанной информации о локалях localepurge может также удалить переведённые справочные страницы.
+Description-sk.UTF-8: Zmazať aj lokalizované manuálové stránky?
+ Na základe rovnakých nastavení lokalizačných súborov, ktoré ste si vybrali skôr, môže localepurge zmazať aj lokalizované manuálové stránky.
+Description-sv.UTF-8: Ta även bort översatta man-sidor?
+ Baserat på dina val kan localepurge även radera översatta man-sidor.
+
+Template: localepurge/dontbothernew
+Type: boolean
+Default: false
+Description: Inform about new locales?
+ If you choose this option, you will be given the opportunity
+ to decide whether to keep or delete newly introduced locales.
+ .
+ If you don't choose it, newly introduced locales will be
+ automatically dropped from the system.
+Description-cs.UTF-8: Informovat o nových locales?
+ Zvolíte-li tuto možnost, budete se moci u nově přidaných locales rozhodnout, zda je budete chtít ponechat či smazat
+ .
+ Odpovíte-li záporně, nově přidané locales se budou ze systému automaticky mazat.
+Description-da.UTF-8: Oplys om nye lokaliseringer?
+ Hvis du vælger denne instilling, så vil du få mulighed for at beslutte hvorvidt nye lokaliseringer (sprogunderstøttelser) skal bevares eller slettes.
+ .
+ Hvis du ikke vælger den, så vil nye lokaliseringer (sprogunderstøttelser) automatisk blive slettet fra systemet.
+Description-de.UTF-8: Neue Locales melden?
+ Wenn Sie diese Option wählen, werden Sie die Möglichkeit erhalten, zu entscheiden, ob neu eingeführte Locales behalten oder gelöscht werden sollen.
+ .
+ Wenn Sie sie nicht wählen, werden neu eingeführte Locales vom System automatisch entfernt.
+Description-es.UTF-8: ¿Desea que se le informe sobre nuevos locales?
+ Si selecciona esta opción, podrá decidir si desea mantener o eliminar nuevos locales que se agreguen posteriormente.
+ .
+ Si no lo selecciona, se eliminarán del sistema automáticamente los nuevos locales que se agreguen.
+Description-eu.UTF-8: Lokala berriei buruz ohartu?
+ Hau hautatzean berriki sartutako lokalak mantenduko edo kenduko diren aukera eskainiko zaizu.
+ .
+ Ez baduzu hori hautatzen, berriki sartutako lokalak sistematik automatikoki kenduko dira.
+Description-fr.UTF-8: Souhaitez-vous Ãªtre informÃ© de nouveaux paramÃštres rÃ©gionauxÂ ?
+ Si vous choisissez cette option, vous aurez la possibilitÃ© de choisir de conserver les fichiers de paramÃštres rÃ©gionaux ajoutÃ©s dans le futur.
+ .
+ Dans le cas contraire, les nouveaux fichiers de paramÃštres rÃ©gionaux seront effacÃ©s automatiquement du systÃšme.
+Description-it.UTF-8: Informare sulle nuove localizzazioni?
+ Se si sceglie questa opzione verrà data l'opportunità di decidere se conservare o meno le nuove localizzazioni introdotte.
+ .
+ Se non la si sceglie, le nuove localizzazioni introdotte verranno automaticamente eliminate dal sistema.
+Description-ja.UTF-8: 新しいロケールを知らせますか？
+ このオプションを選択した場合は新しいロケールについて残すか削除するかを決定する機会を得ることができます。
+ .
+ 選択しない場合は新しいロケールはこのシステムから自動的に削除されます。
+Description-nl.UTF-8: Wilt u bij een nieuwe lokalisatie geïnformeerd worden?
+ Indien u voor deze optie kiest, zult u bij de introductie van een nieuwe lokalisatie de kans krijgen om te kiezen of u die op uw computer wilt behouden of wilt verwijderen.
+ .
+ Indien u niet kiest voor deze optie, zal een nieuwe lokalisatie automatisch niet geïnstalleerd worden op het systeem.
+Description-pl.UTF-8: Informować o nowych językach?
+ Jeśli wybierze się tę opcję, użytkownik będzie miał szansę zdecydowania czy chce zachować nowo wprowadzone tłumaczenia.
+ .
+ Jeśli się jej nie wybierze, nowe języki zostaną automatycznie usunięte z systemu.
+Description-pt.UTF-8: Informar sobre novos locales?
+ Se escolher esta opção, ser-lhe-à dada a oportunidade de decidir manter ou apagar novos locales introduzidos.
+ .
+ Se não o escolher, os novos locales introduzidos serão abandonados automaticamente pelo sistema.
+Description-pt_BR.UTF-8: Informar sobre novos locales?
+ Se você escolher essa opção, lhe será dada a oportunidade de decidir entre manter ou remover novos locales introduzidos.
+ .
+ Se você não escolher essa opção, novos locales introduzidos serão automaticamente removidos do sistema.
+Description-ru.UTF-8: Информировать о новых локалях?
+ Если вы ответите утвердительно, то при появлении новых локалей вам будет предлагаться возможность их удаления или сохранения.
+ .
+ Если вы ответите отрицательно, то новые локали будут автоматически удаляться из системы.
+Description-sk.UTF-8: Informovať o nových lokalizačných súboroch?
+ Ak zvolíte túto voľbu, získate možnosť rozhodnúť, či ponechať alebo odstrániť nové lokalizačné súbory.
+ .
+ Ak ju nezvolíte, nové lokalizačné súbory budú zo systému automaticky odstránené.
+Description-sv.UTF-8: Informera om nya lokalanpassningar?
+ Om detta alternativ ange ger det möjligheten att välja om data ska sparas eller raderas när nya lokalanpassningar dyker upp.
+ .
+ Om du inte anger detta kommer nya lokalanpassningar automatiskt att slängas.
+
+Template: localepurge/showfreedspace
+Type: boolean
+Default: true
+Description: Display freed disk space?
+ The localepurge program can display the disk space freed by each
+ operation, and show a final summary of saved disk space.
+Description-cs.UTF-8: Zobrazit uvolněné místo na disku?
+ localepurge umí vypočítat a zobrazit prostor na disku, který se uvolní jeho činností a při ukončení programu může zobrazit souhrn ušetřeného místa.
+Description-da.UTF-8: Vis frigjort diskplads?
+ Programmet localepurge kan beregne og vise hvor meget diskplads, hver af dens handlinger har frigjort og vise en endelig oversigt over sparet diskplads.
+Description-de.UTF-8: Freigewordenen Festplattenplatz anzeigen?
+ Das Programm Localepurge kann den freigewordenen Festplattenplatz bei jeder Operation sowie eine abschließende Zusammenfassung der gesparten Speicherkapazitäten anzeigen.
+Description-es.UTF-8: ¿Desea ver el espacio liberado en disco?
+ localepurge puede mostrar el espacio en disco liberado por cada operación y un resumen final del espacio en disco que recuperó.
+Description-eu.UTF-8: Bistarazi libratutako diskoaren lekua?
+ 'localepurge' programak eragiketa bakoitzean diskoan libratutako lekua bistara dezake, baita diskoan aurreztutako lekuaren amaierako laburpena ere.
+Description-fr.UTF-8: Faut-il afficher l'espace disque libÃ©rÃ©Â ?
+ Le programme localepurge peut calculer et afficher l'espace disque libÃ©rÃ© par ses actions, puis afficher un rÃ©sumÃ© rapide de l'espace rÃ©cupÃ©rÃ© avant de se terminer.
+Description-it.UTF-8: Mostrare lo spazio su disco liberato?
+ Il programma localepurge può visualizzare lo spazio su disco liberato da ciascuna operazione e mostrare un riassunto finale dello spazio su disco risparmiato.
+Description-ja.UTF-8: 空いたディスク容量を表示しますか？
+ localepurge プログラムは、各操作により空いたディスク容量や最終的に空いたディスク容量のまとめを表示することができます。
+Description-nl.UTF-8: Hoeveelheid vrijgegeven schijfruimte weergeven?
+ Het programma localepurge kan de hoeveelheid schijfruimte die na uitvoering van elke bewerking vrijgegeven wordt, berekenen en weergeven. Op het einde volgt dan een laatste overzicht van de vrijgekomen schijfruimte.
+Description-pl.UTF-8: Wyświetlać przestrzeń zwolnioną z dysku?
+ Program localepurge może wyświetlać przestrzeń zwolnioną z dysku w trakcie każdego działania i pokazywać podsumowanie z sumą odzyskanego miejsca.
+Description-pt.UTF-8: Visualizar o espaço de disco libertado?
+ O programa localepurge pode mostrar o espaço de disco libertado por cada operação, e mostrar um sumário final do espaço de disco libertado.
+Description-pt_BR.UTF-8: Exibir espaço liberado em disco?
+ O programa localepurge pode exibir o espaço liberado em disco por cada operação, e exibir um sumário final do espaço em disco economizado.
+Description-ru.UTF-8: Показывать освобождаемое дисковое пространство?
+ Программа localepurge может показывать освобождаемое дисковое пространство при каждой операции и при завершении работы выводить общее освободившееся место.
+Description-sk.UTF-8: Zobraziť uvoľnené miesto na disku?
+ Program localepurge môže zobraziť miesto na disku, ktoré bude uvoľnené každou operáciou a zobraziť celkové ušetrené miesto na disku.
+Description-sv.UTF-8: Visa ledigt diskutrymme?
+ localepurge kan visa diskutrymme som frigörs av varje operation och visa en summering av sparat diskutrymme.
+
+Template: localepurge/quickndirtycalc
+Type: boolean
+Default: true
+Description: Accurate disk space calculation?
+ There are two ways available to calculate freed disk space. One is
+ much faster than the other but far less accurate if other changes occur
+ on the file system during disk space calculation. The other one is more
+ accurate but slower.
+Description-cs.UTF-8: Důsledné počítání diskového prostoru?
+ Existují dva způsoby počítání uvolněného diskového prostoru. První je mnohem rychlejší, ale méně přesný (obzvláště pokud na souborovém systému současně probíhají i jiné změny). Druhý způsob pracuje přesněji, ovšem je pomalejší.
+Description-da.UTF-8: Nøjagtig beregning af diskplads?
+ Der er to måder at beregne den frigjorte diskplads på. Den ene er meget hurtigere end den anden, men langt mindre præcis hvis der fortages andre ændringer under diskpladsberegningen. Den anden er mere præcis, men langsommere.
+Description-de.UTF-8: Genaue Berechnung des Festplattenplatzes?
+ Es gibt zwei Arten, den freigewordenen Festplattenplatz zu berechnen. Die eine ist viel schneller als die andere, aber deutlich ungenauer, falls während der Berechnung weitere Änderungen am Dateisystem stattfinden. Die zweite Methode ist genauer, aber langsamer.
+Description-es.UTF-8: ¿Desea realizar un cálculo exacto del espacio en disco?
+ Existen dos maneras de calcular el espacio liberado en disco. Una es más rápida que la otra pero menos exacta si ocurren otros cambios en el sistema de archivos mientras se calcula el espacio en disco. La otra funciona con mayor exactitud pero más lentamente.
+Description-eu.UTF-8: Diskoko lekuaren kalkulu zehatza egin?
+ Bi modu daude diskoan libratutako lekua kalkulatzeko:  bata bestea baino askoz azkarragoa izan arren zehaztasun gutxiago du diskoaren lekua kalkulatzean fitxategi-sisteman aldaketak gertatzen badira; bestea zehatzagoa da, motelagoa ordea.
+Description-fr.UTF-8: Faut-il utiliser une mÃ©thode de calcul prÃ©ciseÂ ?
+ Deux mÃ©thodes de calcul de l'espace disque libÃ©rÃ© sont possibles. L'une est plus rapide mais moins prÃ©cise que l'autre dans le cas oÃ¹ d'autres modifications ont lieu sur le disque pendant le calcul. La mÃ©thode prÃ©cise est le choix par dÃ©faut.
+Description-it.UTF-8: Calcolo accurato dello spazio su disco?
+ Sono disponibili due modi di calcolare lo spazio liberato su disco. Uno è molto più veloce dell'altro, ma molto meno accurato se durante il calcolo dello spazio su disco avvengono altri cambiamenti sul file system. L'altro è più accurato ma più lento.
+Description-ja.UTF-8: 厳密なディスク容量計算を行いますか？
+ 空いたディスク容量の計算には二つの方法があります。一つはもう一つの方法より速いものの、もしディスク容量の計算中にファイルシステムに他の変更が掛けられた場合に正確さが大幅に欠けます。もう一つは、より正確な方法ですが遅くなります。
+Description-nl.UTF-8: Een nauwkeurige berekening maken van de schijfruimte?
+ Er zijn twee beschikbare manieren om de hoeveelheid vrijkomende schijfruimte te berekenen. De ene is veel sneller, maar minder nauwkeurig indien er tijdens de berekening ook andere aanpassingen gemaakt worden aan het bestandssysteem. De andere is nauwkeuriger maar trager.
+Description-pl.UTF-8: Obliczać przestrzeń na dysku dokładnie?
+ Są dwie metody obliczania zwolnionej przestrzeni z dysku. Pierwsza jest znacznie szybsza niż druga, lecz jednocześnie o wiele mniej dokładna, jeśli w trakcie jej obliczania zaszły inne zmiany w systemie plików. Druga jest dokładniejsza lecz wolniejsza.
+Description-pt.UTF-8: Cálculo preciso do espaço em disco?
+ Existem dois modos disponíveis para cálculo do espaço em disco libertado. Um é muito mais rápido que o outro mas é menos preciso quando ocorrerem outras alterações no sistema de ficheiros durante o cálculo do espaço em disco. O outro modo é mais preciso mas mais lento.
+Description-pt_BR.UTF-8: Cálculo preciso de espaço em disco?
+ Existem duas maneiras disponíveis de calcular o espaço liberado em disco. Uma é muito mais rápida do que a outra, mas bem menos precisa caso outras mudanças ocorram no sistema de arquivos durante o cálculo do espaço em disco. A outra maneira é mais precisa, mas também é mais lenta.
+Description-ru.UTF-8: Выполнять точный подсчёт дискового пространства?
+ Есть два способа подсчёта освобождаемого дискового пространства. Один намного быстрее другого, но менее точен, если во время подсчёта происходят другие изменения в файловой системе. Второй работает более точно, но медленнее.
+Description-sk.UTF-8: Presný výpočet miesta na disku?
+ Existujú dva spôsoby výpočtu uvoľneného miesta na disku. Jeden je oveľa rýchlejší, ale menej presný, ak počas výpočtu nastanú v súborovom systéme iné zmeny. Druhý spôsob je oveľa presnejší, ale pomalší.
+Description-sv.UTF-8: Korrekt beräkning av diskutrymme?
+ Det finns två olika typer av beräkning av ledigt diskutrymme. Den ena är snabb men räknar inte lika korrekt om det förekommer förändringar i filsystemet medan diskutrymmet beräknas. Den andra räknar mer korrekt men är också lite långsammare.
+
+Template: localepurge/verbose
+Type: boolean
+Default: false
+Description: Display verbose output?
+ The localepurge program can be configured to explicitly show which
+ locale files it deletes. This may cause a lot of screen output.
+Description-cs.UTF-8: Zobrazit upovídaný výstup?
+ localepurge můžete nastavit tak, aby explicitně zobrazoval soubory, které maže. To ovšem může znamenat spousty obrazovkového výstupu.
+Description-da.UTF-8: Vis omfattende uddata?
+ Programmet localepurge kan sættes op til eksplicit at vise hvilke lokaliseringsfiler (sprogfiler), den sletter. Det kan sende ganske meget tekst til skærmen.
+Description-de.UTF-8: Ausführliche Ausgaben anzeigen?
+ Das Programm Localepurge kann so eingerichtet werden, dass es explizit anzeigt, welche Locale-Dateien es löscht. Dies könnte viele Bildschirmausgaben nach sich ziehen.
+Description-es.UTF-8: ¿Desea una salida detallada?
+ Puede configurar localepurge para que detalle los archivos locale que elimina. Esto podría mostrar mucha información en la pantalla.
+Description-eu.UTF-8: Bistarazi irteera xehatua?
+ Ezabatzen diren lokalen fitxategiak esplizitoki zerrendatzeko konfigura daiteke 'localepurge' programa. Honek irteera luze bat sor dezake pantailan.
+Description-fr.UTF-8: Faut-il utiliser un affichage dÃ©taillÃ©Â ?
+ Le programme localepurge peut Ãªtre configurÃ© pour afficher chaque ensemble de paramÃštres rÃ©gionaux qu'il supprime. Cela peut gÃ©nÃ©rer l'affichage de nombreux messages.
+Description-it.UTF-8: Visualizzare un output dettagliato?
+ Il programma localepurge può essere configurato per mostrare esplicitamente i file localizzati che cancella. Questo può causare una grande quantità di output sullo schermo.
+Description-ja.UTF-8: 詳細情報を表示しますか？
+ localepurge プログラムは、削除するロケールファイルを明示的に表示するよう設定できます。このオプションは、大量の画面表示を行います。
+Description-nl.UTF-8: Uitgebreide uitvoer weergeven?
+ Het programma localepurge kan zo ingesteld worden dat het expliciet aangeeft welke lokalisatiebestanden verwijderd worden. Dit kan erg veel schermuitvoer geven.
+Description-pl.UTF-8: Wyświetlać szczegółowe komunikaty?
+ Program localepurge można skonfigurować tak, aby wyświetlał dokładnie które pliki tłumaczeń usuwa. Może to zając wiele miejsca w oknie terminala.
+Description-pt.UTF-8: Visualizar os resultados em modo detalhado?
+ O programa localepurge pode ser configurado de modo a mostrar explicitamente quais os ficheiros de locale que apaga. Isto pode causa muitos resultados mostrados no monitor.
+Description-pt_BR.UTF-8: Exibir saída detalhada?
+ O programa localepurge pode ser configurado para exibir explicitamente quais arquivos de locale ele remove. Isso pode causar a exibição de muita saída na tela.
+Description-ru.UTF-8: Показывать подробности при работе?
+ Программа localepurge может показывать удаляемые файлы локалей. Возможно, их будет очень много.
+Description-sk.UTF-8: Zobraziť podrobný výstup?
+ Program localepurge môže byť nastavený tak, aby zobrazil konkrétne súbory, ktoré bude odstraňovať. Táto voľba môže mať za následok rozsiahly výstup na obrazovku.
+Description-sv.UTF-8: Visa pratig utdata?
+ localepurge kan ställas in att visa exakt vilka filer som tas bort. Detta kan medföra att väldigt mycket utdata skrivs till skärmen.

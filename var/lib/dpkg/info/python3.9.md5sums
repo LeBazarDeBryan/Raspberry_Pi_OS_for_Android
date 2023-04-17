@@ -1,0 +1,15 @@
+041e818cab9b2ea3fca7af806d5eca64  usr/bin/pydoc3.9
+d7ef42cdef230960fb0a87a568906dc0  usr/bin/pygettext3.9
+77c6623e4c2afa76936c4486d5bc3280  usr/share/applications/python3.9.desktop
+5b71849c36766c41f71ab28114845551  usr/share/doc/python3.9/ACKS.gz
+42c6a075c54280cd8a42f6f9bb13d77e  usr/share/doc/python3.9/NEWS.gz
+1da1ad438c5e7ac911a3ac479e37c421  usr/share/doc/python3.9/README.Debian
+8608a2c9ac26507cb312b18dc228edd6  usr/share/doc/python3.9/README.rst.gz
+651520c84aa00c139dedccfd2cbd6aa4  usr/share/doc/python3.9/changelog.Debian.gz
+d8c47e21fcd8f5a22f90828d568b0084  usr/share/doc/python3.9/copyright
+6fca031a832ee0e8626d38581268d34a  usr/share/lintian/overrides/python3.9
+7441d9496e738738d8a16dcf33f037eb  usr/share/man/man1/pdb3.9.1.gz
+8b0563709da8485edcaf6a7f4228bbb3  usr/share/man/man1/pydoc3.9.1.gz
+90cf8dfcb6b3c2741f64c36c6842a256  usr/share/man/man1/pygettext3.9.1.gz
+9f9c85f23667a9a942aa0de9588e5918  usr/share/man/man1/pysetup3.9.1.gz
+d183cb64badc9865b14c18fb0059b39f  usr/share/pixmaps/python3.9.xpm

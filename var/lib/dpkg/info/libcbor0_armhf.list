@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libcbor.so.0.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libcbor0
+/usr/share/doc/libcbor0/README.md
+/usr/share/doc/libcbor0/changelog.Debian.gz
+/usr/share/doc/libcbor0/changelog.gz
+/usr/share/doc/libcbor0/copyright
+/usr/lib/arm-linux-gnueabihf/libcbor.so.0

@@ -1,0 +1,83 @@
+#! /bin/sh
+#
+# initscripts postrm
+#
+
+set -e
+
+INITSCRIPTS="mountkernfs.sh mount-configfs brightness hostname.sh mountdevsubfs.sh checkroot.sh \
+	checkroot-bootclean.sh checkfs.sh mountall.sh mountall-bootclean.sh \
+	mountnfs.sh mountnfs-bootclean.sh bootmisc.sh urandom halt reboot \
+	umountroot umountfs umountnfs.sh sendsigs killprocs single motd \
+	bootlogs rc.local rmnologin"
+
+case "$1" in
+  purge)
+	#
+	# Remove abandoned conffiles
+	#
+	rm -f /etc/init.d/bootclean
+	rm -f /etc/init.d/bootclean.dpkg-old
+	rm -f /etc/init.d/bootclean.sh
+	rm -f /etc/init.d/bootclean.sh.dpkg-old
+	rm -f /etc/default/bootlogd
+	rm -f /etc/default/bootlogd.dpkg-old
+	rm -f /var/lib/urandom/random-seed
+
+	#
+	# Remove configuration files
+	#
+	rm -f \
+		/etc/default/rcS \
+		/etc/motd.tail \
+		/etc/motd.static
+
+	#
+	# Remove state files
+	#
+	rm -f /var/lib/initscripts/brightness*
+	rm -f /var/lib/initscripts/nologin
+
+	#
+	# Remove run time state files
+	#
+	rm -f /var/run/motd
+
+	#
+	# Remove log files
+	#
+	rm -f \
+		/var/log/dmesg \
+		/var/log/boot \
+		/var/log/fsck/checkroot \
+		/var/log/fsck/checkfs
+
+	# Remove rc symlinks in the reverse dependency order they were
+	# inserted
+	for F in $INITSCRIPTS; do
+		REVERSE="$F $REVERSE"
+	done
+	for F in $REVERSE; do
+		update-rc.d $F remove >/dev/null || exit $?
+	done
+
+	for F in $INITSCRIPTS; do
+		SERVICE="$(basename $F .sh).service"
+		if [ -L /etc/systemd/system/$SERVICE ]; then
+			rm /etc/systemd/system/$SERVICE
+		fi
+	done
+
+	# Remove /dev/pts and /dev/shm ?
+	;;
+esac
+
+# Automatically added by dh_installdeb/13.3.4
+dpkg-maintscript-helper rm_conffile /etc/init.d/bootlogd 2.88dsf-42 initscripts -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/stop-bootlogd 2.88dsf-42 initscripts -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/stop-bootlogd-single 2.88dsf-42 initscripts -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/motd 2.93-3\~ initscripts -- "$@"
+# End automatically added section
+
+
+:

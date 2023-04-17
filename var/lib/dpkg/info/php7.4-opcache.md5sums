@@ -1,0 +1,5 @@
+c1d64a0df04a9fb4d45a3a7f8804b905  usr/lib/php/20190902/opcache.so
+b4358047262260ffb316eb6c9459f16c  usr/share/bug/php7.4-opcache/control
+82a4a76ad5bb6650691a56c2923d350c  usr/share/bug/php7.4-opcache/script
+8d94e12c09a1acae81bb898eca404137  usr/share/lintian/overrides/php7.4-opcache
+11686c89e38e05a6c1ef41c186588b21  usr/share/php7.4-opcache/opcache/opcache.ini

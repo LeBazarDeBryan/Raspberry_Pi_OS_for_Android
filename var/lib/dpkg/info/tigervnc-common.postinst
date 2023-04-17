@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "configure" ]; then
+  bindir=/usr/bin
+  mandir=/usr/share/man
+
+  for tiger in tigervncconfig tigervncpasswd; do
+    notiger=`echo $tiger | sed -e 's/tiger//'`;
+    update-alternatives --install $bindir/$notiger $notiger $bindir/$tiger 80 \
+      --slave $mandir/man1/$notiger.1.gz $notiger.1.gz $mandir/man1/$tiger.1.gz
+  done
+fi
+
+
+
+exit 0

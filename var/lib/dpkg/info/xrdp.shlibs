@@ -1,0 +1,4 @@
+libcommon 0 xrdp (>= 0.9.19)
+libscp 0 xrdp (>= 0.9.19)
+libxrdp 0 xrdp (>= 0.9.19)
+libxrdpapi 0 xrdp (>= 0.9.19)

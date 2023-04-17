@@ -1,0 +1,15 @@
+auto
+/usr/bin/vncviewer
+vncviewer.1.gz
+/usr/share/man/man1/vncviewer.1.gz
+xvncviewer
+/usr/bin/xvncviewer
+xvncviewer.1.gz
+/usr/share/man/man1/xvncviewer.1.gz
+
+/usr/bin/xtigervncviewer
+80
+/usr/share/man/man1/xtigervncviewer.1.gz
+/usr/bin/xtigervncviewer
+/usr/share/man/man1/xtigervncviewer.1.gz
+

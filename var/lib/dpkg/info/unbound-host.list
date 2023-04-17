@@ -1,0 +1,13 @@
+/.
+/usr
+/usr/bin
+/usr/bin/unbound-host
+/usr/share
+/usr/share/doc
+/usr/share/doc/unbound-host
+/usr/share/doc/unbound-host/changelog.Debian.gz
+/usr/share/doc/unbound-host/changelog.gz
+/usr/share/doc/unbound-host/copyright
+/usr/share/man
+/usr/share/man/man1
+/usr/share/man/man1/unbound-host.1.gz

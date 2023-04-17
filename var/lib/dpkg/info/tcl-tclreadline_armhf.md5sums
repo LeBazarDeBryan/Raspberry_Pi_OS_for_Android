@@ -1,0 +1,13 @@
+1dbcd8bcbdcf9556431bd8e7ff4d2a1f  usr/include/arm-linux-gnueabihf/tclreadline.h
+234cddbb14c980e789b14afd43239272  usr/lib/arm-linux-gnueabihf/libtclreadline-2.3.8.so
+7e13981aeaef2ce3972b000980573a7a  usr/lib/tcltk/arm-linux-gnueabihf/tclreadline2.3.8/pkgIndex.tcl
+5c12255b21b2b0f5f15b2f9921fb5beb  usr/lib/tcltk/arm-linux-gnueabihf/tclreadline2.3.8/tclreadlineCompleter.tcl
+b47f295aac26ef6cd36447bb187c0dc1  usr/lib/tcltk/arm-linux-gnueabihf/tclreadline2.3.8/tclreadlineInit.tcl
+ad7a26f8317ffa7a3f9a617d8b284c86  usr/lib/tcltk/arm-linux-gnueabihf/tclreadline2.3.8/tclreadlineSetup.tcl
+d2573135fab3ae200c3f18709bbbca9b  usr/share/doc/tcl-tclreadline/AUTHORS
+2580d54f76d1df05c471087645e838bd  usr/share/doc/tcl-tclreadline/README.md
+5e732ee3a0f29e6d3e9ad98b95e68cf4  usr/share/doc/tcl-tclreadline/changelog.Debian.gz
+68b3217d1d2e7d70ab6951bdfa65aa55  usr/share/doc/tcl-tclreadline/changelog.gz
+9f6d2b1c37335afcdb657ced553dae32  usr/share/doc/tcl-tclreadline/copyright
+ad4e1522539134ac329849288e580ac5  usr/share/lintian/overrides/tcl-tclreadline
+b265caf5a8a15aac9da10c865b4acabd  usr/share/man/man3/tclreadline.3tcl.gz

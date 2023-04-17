@@ -1,0 +1,19 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: *
+Copyright: 2001, Paul Seelig <pseelig@debian.org>
+           2009, Francesco Potortì <Potorti@isti.cnr.it>
+           2012, Niels Thykier <niels@thykier.net>
+License: GPL-2+
+ This package was debianized by Paul Seelig <pseelig@debian.org> on
+ Sun, 25 Mar 2001 03:22:14 +0200.
+ .
+ The original parts by Paul Seelig were licensed under the GNU General
+ Public License (GPL) with no version specified (anything included in
+ localepurge 0.6.2 or earlier).
+ .
+ The rest of localepurge is licensed under GNU General Public License,
+ version 2 (or at your option, any later version).
+ .
+ On Debian Linux systems, the complete text of the GNU General Public
+ License version 2 can be found in `/usr/share/common-licenses/GPL-2'.

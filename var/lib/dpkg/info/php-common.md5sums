@@ -1,0 +1,11 @@
+96373f590a8ead4e2f58b633a972e2fd  lib/systemd/system/phpsessionclean.service
+4af6059c9bc66d03593c02c14cee2f46  lib/systemd/system/phpsessionclean.timer
+61cab403e3f9c7dd95c4b2ba19bcac75  usr/lib/php/php-fpm-socket-helper
+05c6fb7a9cc42f4188c0f3fc43c2907d  usr/lib/php/php-helper
+bf4474b849fdbef0946a10dee4b1453f  usr/lib/php/php-maintscript-helper
+db98c230a9a22b5dac9cc4275e4ac6e8  usr/lib/php/sessionclean
+104cba2cac929ea48394cacf63c7784b  usr/sbin/phpenmod
+43609caf96b7877b13c6acae374a50a2  usr/sbin/phpquery
+60f8581d41ae8ce0ce8b9ab90d6377c8  usr/share/doc/php-common/changelog.gz
+3b7c1ad43270f67331ee3abcb97c9ff1  usr/share/doc/php-common/copyright
+d311113956a48cc67e32651ff771b3ea  usr/share/lintian/overrides/php-common

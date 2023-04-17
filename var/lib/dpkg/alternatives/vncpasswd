@@ -1,0 +1,9 @@
+auto
+/usr/bin/vncpasswd
+vncpasswd.1.gz
+/usr/share/man/man1/vncpasswd.1.gz
+
+/usr/bin/tigervncpasswd
+80
+/usr/share/man/man1/tigervncpasswd.1.gz
+

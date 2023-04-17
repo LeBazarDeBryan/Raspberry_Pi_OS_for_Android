@@ -1,0 +1,10 @@
+TARGETS = inetutils-syslogd unattended-upgrades android-raspbian sudo ssh xrdp avahi-daemon lighttpd pihole-FTL cron dbus android-raspbian-status
+INTERACTIVE =
+ssh: inetutils-syslogd
+xrdp: inetutils-syslogd
+avahi-daemon: inetutils-syslogd
+lighttpd: inetutils-syslogd
+pihole-FTL: inetutils-syslogd
+cron: inetutils-syslogd
+dbus: inetutils-syslogd
+android-raspbian-status: avahi-daemon

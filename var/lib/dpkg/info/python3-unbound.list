@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/python3
+/usr/lib/python3/dist-packages
+/usr/lib/python3/dist-packages/_unbound.cpython-39-arm-linux-gnueabihf.so
+/usr/lib/python3/dist-packages/unbound.py
+/usr/lib/python3/dist-packages/unboundmodule.py
+/usr/share
+/usr/share/doc
+/usr/share/doc/python3-unbound
+/usr/share/doc/python3-unbound/changelog.Debian.gz
+/usr/share/doc/python3-unbound/changelog.gz
+/usr/share/doc/python3-unbound/copyright

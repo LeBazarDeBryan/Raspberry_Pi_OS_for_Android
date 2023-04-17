@@ -1,0 +1,5 @@
+22e189aeb2e8ed6593f7721285ea88b4  usr/lib/arm-linux-gnueabihf/libQt5DBus.so.5.15.2
+bc18c7539c854995f6ed00561511fe82  usr/share/doc/libqt5dbus5/changelog.Debian.gz
+d6f8b4b98631fc3c4a97b5d53645a287  usr/share/doc/libqt5dbus5/changelog.gz
+fcff62d59a8729d2c26e846856ada5e3  usr/share/doc/libqt5dbus5/copyright
+eacad422d14aa8329e66cc49f8d4d888  usr/share/lintian/overrides/libqt5dbus5

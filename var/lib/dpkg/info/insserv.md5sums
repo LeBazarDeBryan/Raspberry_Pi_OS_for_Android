@@ -1,0 +1,12 @@
+6779a958cc320e49d5b43b731f9fad88  sbin/insserv
+32975fe14795d6fce1408d5fd22747fd  usr/share/bash-completion/completions/insserv
+725768e3a110644923bab3dd62f3dc02  usr/share/doc/insserv/README
+7974d9cf5a43bf50290dc0d1a82cf355  usr/share/doc/insserv/README.Debian
+72f350c4149ee229fc7cab1e75178029  usr/share/doc/insserv/changelog.Debian.gz
+d3c96bd4f97905f1b73e913a05ce53c8  usr/share/doc/insserv/changelog.gz
+3c0b108ea13bcdb220218fc3e2624962  usr/share/doc/insserv/copyright
+c665d3ff73a4c2299333e453d8b46032  usr/share/insserv/check-archive-initd-scripts
+ff3f677e13ddb1f723ae8ca3c39da157  usr/share/insserv/check-initd-order
+1bd94b5acbd1e48b4f3e6302bae0af2f  usr/share/insserv/make-testsuite
+59324efea42aeee63581372baf939865  usr/share/insserv/seq-changes
+73f98c2da3ba842aa9d6fa1d213501af  usr/share/man/man8/insserv.8.gz

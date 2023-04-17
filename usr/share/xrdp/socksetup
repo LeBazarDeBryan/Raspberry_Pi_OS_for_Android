@@ -1,0 +1,23 @@
+:
+
+LC_ALL=C PATH=/sbin:/usr/sbin:/bin:/usr/bin
+export LC_ALL PATH
+unset LANGUAGE
+
+case $(id -u) in
+(0) ;;
+(*)
+	echo >&2 "E: need root"
+	exit 4
+	;;
+esac
+
+mkdir -p /run/xrdp || exit 1
+chown root:xrdp /run/xrdp || exit 1
+chmod 2775 /run/xrdp || exit 1
+
+mkdir -p /run/xrdp/sockdir || exit 1
+chown root:xrdp /run/xrdp/sockdir || exit 1
+chmod 3777 /run/xrdp/sockdir || exit 1
+
+:

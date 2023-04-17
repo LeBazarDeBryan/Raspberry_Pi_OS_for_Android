@@ -1,0 +1,13 @@
+dba1f0b2280f4ff59b842de1646465a6  usr/bin/tigervncconfig
+81e5c29bb4edaa931928d96df12c5165  usr/bin/tigervncpasswd
+5b7581f95b33155d04652e8279d2fc42  usr/share/doc/tigervnc-common/LICENCE.TXT.gz
+001522c88b10610f6312daf092d7fe70  usr/share/doc/tigervnc-common/README.rst.gz
+532cad32135fdf37c1d3fe425938d8ee  usr/share/doc/tigervnc-common/changelog.Debian.gz
+003c29f0a5f59581f787d86eabca4bc6  usr/share/doc/tigervnc-common/copyright
+713027fc9b95108a0681d2e5dfa35f6a  usr/share/man/man1/tigervncconfig.1.gz
+4e48925f72da70452da214730f80ed31  usr/share/man/man1/tigervncpasswd.1.gz
+e874b011377bcda9480bd234bef835f2  usr/share/man/man5/tigervnc.conf.5x.gz
+c2240f381d94aa4b909efc0c0a2f9401  usr/share/perl5/TigerVNC/Common.pm
+2451cef7daa5d604cd1c4fd685b75c45  usr/share/perl5/TigerVNC/Config.pm
+5c8dc4a4f7bc05f51ce9705f05af5ddf  usr/share/perl5/TigerVNC/OptionTie.pm
+42c47edd049180e3f3be36c63a916ec0  usr/share/perl5/TigerVNC/Wrapper.pm

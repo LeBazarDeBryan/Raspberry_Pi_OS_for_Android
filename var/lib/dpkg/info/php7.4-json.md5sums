@@ -1,0 +1,5 @@
+08ad8d95a393b1d0668fea7266cc36dc  usr/lib/php/20190902/json.so
+b4358047262260ffb316eb6c9459f16c  usr/share/bug/php7.4-json/control
+90b40abd9e45aa38384852252f5af343  usr/share/bug/php7.4-json/script
+e96de08c37f20f28c214ae4aa791f8f4  usr/share/lintian/overrides/php7.4-json
+0732bc961c57a55cd03a3294554d7a70  usr/share/php7.4-json/json/json.ini

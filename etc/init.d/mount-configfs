@@ -1,0 +1,34 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          mount-configfs
+# Required-Start:    mountkernfs
+# Required-Stop:
+# Should-Start:      kmod
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Mount configfs kernel virtual file system.
+# Description:       Mount configfs kernel virtual file system,
+#                    if "configfs" module is loaded.
+### END INIT INFO
+set -eu
+
+export PATH=/usr/bin:/bin
+
+case ${1:-missing} in
+(start|restart|force-reload)
+	readonly mountpoint='/sys/kernel/config'
+	# This directory exists only if "configfs" module was loaded by "kmod"
+	# script.
+	test -d "${mountpoint}"              || exit 0
+	! findmnt "${mountpoint}" >/dev/null || exit 0
+
+	mount none -t configfs "${mountpoint}"
+	;;
+(stop)
+	# No-op
+	;;
+(*)
+	echo "Usage: mount-configfs [start|stop]" >&2
+	exit 3
+	;;
+esac

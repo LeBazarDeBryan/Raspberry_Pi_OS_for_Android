@@ -1,0 +1,5 @@
+/etc/pam.d/tigervnc
+/etc/tigervnc/openssl-ecparams.pem
+/etc/tigervnc/openssl.cnf
+/etc/tigervnc/vncserver-config-defaults
+/etc/tigervnc/vncserver-config-mandatory

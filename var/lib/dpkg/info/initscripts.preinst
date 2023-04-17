@@ -1,0 +1,20 @@
+#! /bin/sh
+set -e
+
+case $1 in
+(install|upgrade)
+	if dpkg --compare-versions "$2" lt '2.94-2' ; then
+		if [ -f /etc/rc.local ] ; then
+			mv /etc/rc.local /etc/rc.local.dpkg-old
+		fi
+	fi
+	;;
+esac
+
+# Automatically added by dh_installdeb/13.3.4
+dpkg-maintscript-helper rm_conffile /etc/init.d/bootlogd 2.88dsf-42 initscripts -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/stop-bootlogd 2.88dsf-42 initscripts -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/stop-bootlogd-single 2.88dsf-42 initscripts -- "$@"
+dpkg-maintscript-helper rm_conffile /etc/init.d/motd 2.93-3\~ initscripts -- "$@"
+# End automatically added section
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdeb/12.10
+dpkg-maintscript-helper rm_conffile /etc/init/binfmt-support.conf 2.1.8-1~ -- "$@"
+# End automatically added section

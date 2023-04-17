@@ -1,0 +1,93 @@
+#!/bin/sh -e
+
+### BEGIN INIT INFO
+# Provides:          dnscrypt-proxy
+# Required-Start:    $remote_fs
+# Required-Stop:     $remote_fs
+# Should-Start:      $network $syslog
+# Should-Stop:       $network $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start and stop dnscrypt-proxy
+# Description:       dnscrypt-proxy is Domain Name resolver with extra security
+#        features and enhanced privacy.
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+. /lib/lsb/init-functions
+
+DNSCRYPT_PROXY_BIN=/usr/sbin/dnscrypt-proxy
+DNSCRYPT_PROXY_USER=_dnscrypt-proxy
+DNSCRYPT_PROXY_PIDFILE=/run/dnscrypt-proxy.pid
+DNSCRYPT_PROXY_CONF=/etc/default/dnscrypt-proxy
+DNSCRYPT_PROXY_HOME=/run/dnscrypt-proxy
+DNSCRYPT_PROXY_OPTIONS=""
+DNSCRYPT_PROXY_LOCAL_ADDRESS="127.0.2.1:53"
+DNSCRYPT_PROXY_RESOLVER_NAME=cisco
+
+# Exit if the package is not installed
+[ -x "${DNSCRYPT_PROXY_BIN}" ] || exit 0
+
+[ -r "${DNSCRYPT_PROXY_CONF}" ] && . "${DNSCRYPT_PROXY_CONF}"
+
+
+case "$1" in
+    start)
+        log_daemon_msg "Starting dnscrypt proxy service..." "dnscrypt-proxy"
+
+        [ -d "${DNSCRYPT_PROXY_HOME}" ] || \
+            mkdir -m 0555 "${DNSCRYPT_PROXY_HOME}"
+        
+        if start_daemon -p "${DNSCRYPT_PROXY_PIDFILE}" ${DNSCRYPT_PROXY_BIN} \
+                        --pidfile "${DNSCRYPT_PROXY_PIDFILE}" \
+                        --daemonize \
+                        --user="${DNSCRYPT_PROXY_USER}" \
+                        --local-address="${DNSCRYPT_PROXY_LOCAL_ADDRESS}" \
+                        --resolver-name="${DNSCRYPT_PROXY_RESOLVER_NAME}" \
+                        $DNSCRYPT_PROXY_OPTIONS; then
+            if [ -x /sbin/resolvconf ]; then
+                echo "nameserver ${DNSCRYPT_PROXY_LOCAL_ADDRESS}" \
+                    | cut -d ':' -f 1 \
+                    | /sbin/resolvconf -a lo.dnscrypt-proxy
+            fi
+            log_success_msg
+        else
+            log_failure_msg
+        fi
+        ;;
+
+    stop)
+        log_daemon_msg "Stopping dnscrypt proxy service..." "dnscrypt-proxy"
+
+        if [ -x /sbin/resolvconf ]; then
+            /sbin/resolvconf -d lo.dnscrypt-proxy
+        fi
+
+        if killproc -p "${DNSCRYPT_PROXY_PID}" ${DNSCRYPT_PROXY_BIN}
+        then
+            log_success_msg
+        else
+            log_failure_msg
+        fi
+        ;;
+
+    restart|force-reload)
+        $0 stop
+        $0 start
+        ;;
+    
+    status)
+        ret=0
+        status_of_proc -p "${DNSCRYPT_PROXY_PIDFILE}" ${DNSCRYPT_PROXY_BIN} \
+                       dnscrypt-proxy 2>/dev/null || ret=$?
+        exit $ret
+        ;;
+
+    *)
+        log_action_msg "Usage: /etc/init.d/dnscrypt-proxy {start|stop|restart|force-reload|status}"
+        exit 1
+        ;;
+esac
+
+exit 0

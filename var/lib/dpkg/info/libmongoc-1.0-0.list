@@ -1,0 +1,17 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libmongoc-1.0.so.0.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libmongoc-1.0-0
+/usr/share/doc/libmongoc-1.0-0/NEWS.gz
+/usr/share/doc/libmongoc-1.0-0/README.rst
+/usr/share/doc/libmongoc-1.0-0/THIRD_PARTY_NOTICES.gz
+/usr/share/doc/libmongoc-1.0-0/changelog.Debian.gz
+/usr/share/doc/libmongoc-1.0-0/copyright
+/usr/share/lintian
+/usr/share/lintian/overrides
+/usr/share/lintian/overrides/libmongoc-1.0-0
+/usr/lib/arm-linux-gnueabihf/libmongoc-1.0.so.0

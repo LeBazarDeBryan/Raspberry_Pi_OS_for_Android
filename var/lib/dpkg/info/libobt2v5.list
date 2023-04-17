@@ -1,0 +1,15 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libobt.so.2.0.2
+/usr/share
+/usr/share/doc
+/usr/share/doc/libobt2v5
+/usr/share/doc/libobt2v5/AUTHORS
+/usr/share/doc/libobt2v5/NEWS.Debian.gz
+/usr/share/doc/libobt2v5/README
+/usr/share/doc/libobt2v5/changelog.Debian.gz
+/usr/share/doc/libobt2v5/changelog.gz
+/usr/share/doc/libobt2v5/copyright
+/usr/lib/arm-linux-gnueabihf/libobt.so.2

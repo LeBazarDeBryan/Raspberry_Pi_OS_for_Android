@@ -1,0 +1,13 @@
+c48e372a5df2e9c6db810bc60ecedb68  lib/arm-linux-gnueabihf/libnss_mdns.so.2
+29191df2baebf0fc51f3ec9fc80f913e  lib/arm-linux-gnueabihf/libnss_mdns4.so.2
+e1a5d5fafafe57ce78c53ddd013ff5ba  lib/arm-linux-gnueabihf/libnss_mdns4_minimal.so.2
+1aeb179a94b13587985f8745da31954f  lib/arm-linux-gnueabihf/libnss_mdns6.so.2
+0fdc4b0b9582d81ba0a423be153bb2de  lib/arm-linux-gnueabihf/libnss_mdns6_minimal.so.2
+53ad58a26c8e556ca64e3fec4d655459  lib/arm-linux-gnueabihf/libnss_mdns_minimal.so.2
+2dd2a82874a4966aa1f79de07d456478  usr/share/doc/libnss-mdns/ACKNOWLEDGEMENTS.md
+7088b2bb89da0d946a23192996f46ab4  usr/share/doc/libnss-mdns/NEWS.md.gz
+1a627c7c2f527476cb2197fbd69d694d  usr/share/doc/libnss-mdns/README.Debian
+9d0bab19f0a242e55ad5122e90789795  usr/share/doc/libnss-mdns/README.md.gz
+1a83d1528358d7009d27957fb48a3a36  usr/share/doc/libnss-mdns/changelog.Debian.gz
+c7b9832a71b331fb0d5e47c40ef62137  usr/share/doc/libnss-mdns/copyright
+463aee065c7827f716f83708de925f28  usr/share/lintian/overrides/libnss-mdns

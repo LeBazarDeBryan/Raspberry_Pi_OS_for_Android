@@ -1,0 +1,6 @@
+/var/log/xrdp*.log {
+    compress
+    missingok
+    notifempty
+    copytruncate
+}

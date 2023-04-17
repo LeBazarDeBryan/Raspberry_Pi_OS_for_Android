@@ -1,0 +1,33 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "remove" -o "$1" = "deconfigure" ]; then
+    for binary in php phar phar phar.phar; do
+        update-alternatives --remove ${binary} /usr/bin/${binary}7.4
+    done
+fi
+
+php_enable() { return 0; }
+
+if [ "$1" = "remove" ]; then
+    if [ -e /usr/lib/php/php-maintscript-helper ]; then
+	. /usr/lib/php/php-maintscript-helper
+
+	mods=$(phpquery -M -v 7.4)
+	for mod in $mods; do
+	    php_invoke dismod 7.4 cli $mod
+	done
+    else
+	for mod in /etc/php/7.4/cli/conf.d/*.ini; do 
+	    rm -f $mod
+	    for ext in '~' '%' .bak .ucf-new .ucf-old .ucf-dist;  do
+		rm -f $mod$ext
+	    done
+	done
+    fi
+fi
+
+
+
+exit 0

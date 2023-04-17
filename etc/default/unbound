@@ -1,0 +1,5 @@
+# If set, the unbound daemon will be started and stopped by the init script.
+UNBOUND_ENABLE=true
+ROOT_TRUST_ANCHOR_UPDATE=true
+ROOT_TRUST_ANCHOR_FILE=/var/lib/unbound/root.key
+DAEMON_OPTS="-c /etc/unbound/unbound.conf"

@@ -1,0 +1,3 @@
+[console_scripts]
+xkcdpass = xkcdpass.xkcd_password:main
+

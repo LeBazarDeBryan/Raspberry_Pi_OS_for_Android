@@ -1,0 +1,42 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = "configure" ] && [ -n "$2" ]; then
+    for sapi in $(phpquery -v 7.4 -S); do
+	if [ -h /etc/php/7.4/$sapi/conf.d/20-xml.ini ]; then
+	    rm /etc/php/7.4/$sapi/conf.d/20-xml.ini;
+	fi
+    done
+fi
+
+if [ "$1" = "configure" ]; then
+    # Install the new versioned configuration
+    inidir=/etc/php/7.4/mods-available
+
+    if [ -e /usr/lib/php/php-maintscript-helper ] ; then
+	. /usr/lib/php/php-maintscript-helper
+
+	for dsoname in dom simplexml xml xmlreader xmlwriter xsl; do
+	    inifile=${dsoname}.ini
+
+	    # Register new conffile with UCF
+	    ucf /usr/share/php7.4-xml/xml/${inifile} ${inidir}/${inifile}
+	    ucfr --force php7.4-xml ${inidir}/${inifile}
+	    
+	    if [ -f "${inidir}/${inifile}.dpkg-new" ]; then
+		md5sum="$(md5sum ${inidir}/${inifile}.dpkg-new | sed -e 's/ .*//')"
+		old_md5sum="$(md5sum ${inidir}/${inifile} | sed -e 's/ .*//')"
+		if [ "$md5sum" = "$old_md5sum" ]; then
+		    mv "${inidir}/${inifile}.dpkg-new" "${inidir}/${inifile}"
+		fi
+	    fi
+	
+	    php_invoke enmod 7.4 ALL ${dsoname}
+	done
+    fi
+fi
+
+
+
+exit 0

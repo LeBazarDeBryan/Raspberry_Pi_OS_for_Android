@@ -1,0 +1,162 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          dirsrv
+# Required-Start:    $remote_fs
+# Required-Stop:     $remote_fs
+# Should-Start:      $network
+# Should-Stop:       $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start and stop 389 Directory Server
+# Description:       dirsrv is the 389 LDAP Directory Server
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+test -f /etc/default/dirsrv && . /etc/default/dirsrv
+
+. /lib/lsb/init-functions
+
+DISTRO=$(lsb_release -is 2>/dev/null || echo Debian)
+CONFDIR="/etc/dirsrv"
+BASEEXEC="ns-slapd"
+EXEC="/usr/sbin/$BASEEXEC"
+PROG="dirsrv"
+PIDDIR="/var/run/dirsrv"
+LOCKDIR="/var/lock/dirsrv"
+
+check_network() {
+    if [ -z "$(/sbin/ifconfig)" ]; then
+        log_action_msg "No networks configured."
+        return 1 
+    fi
+    return 0
+}
+
+fix_pid_dir_ownership()
+{
+    if [ ! -d $PIDDIR ] ; then
+        mkdir -p $PIDDIR
+        owner=`grep \^nsslapd-localuser $1/dse.ldif | awk '{print $2}'`
+        if [ -n "$owner" ] ; then
+            chown $owner $PIDDIR 2>&1 > /dev/null
+            chmod 700 $PIDDIR 2>&1 > /dev/null
+        fi
+    fi
+}
+
+fix_lock_dir_ownership()
+{
+    if [ ! -d $LOCKDIR/slapd-$2 ] ; then
+        mkdir -p $LOCKDIR/slapd-$2
+        owner=`grep \^nsslapd-localuser $1/dse.ldif | awk '{print $2}'`
+        if [ -n "$owner" ] ; then
+            chown -R $owner $LOCKDIR/slapd-$2 2>&1 > /dev/null
+            chmod -R 700 $LOCKDIR/slapd-$2 2>&1 > /dev/null
+        fi
+    fi
+}
+
+INSTANCES=""
+
+# Ignore instances that have been removed
+for FILE in `/bin/ls -d $CONFDIR/slapd-* 2>/dev/null | sed -n '/\.removed$/!p'`; do
+    if [ -d "$FILE" ] ; then
+        inst=`echo "$FILE" | sed -e "s|$CONFDIR/slapd-||"`
+        INSTANCES="$INSTANCES $inst"
+    fi
+done
+
+if [ -z "$INSTANCES" ]; then
+    log_action_msg "no $PROG instances configured so not starting 389 DS"
+    exit 0
+fi
+
+if [ -n "$2" ]; then
+   for I in $INSTANCES; do
+      if [ "$2" = "$I" ]; then
+         INSTANCES="$2"
+      fi
+   done
+   if [ "$2" != "$INSTANCES" ]; then
+      echo -n "$2 is an invalid dirsrv instance"
+      log_action_msg "$2 is an invalid dirsrv instance"
+      log_end_msg 1
+      exit 1
+   fi
+fi
+
+if [ ! -x $EXEC ]; then
+    log_action_msg "$EXEC binary missing - not doing anything"
+    log_end_msg 1
+    exit 1
+fi
+
+start() {
+    for INSTANCE in $INSTANCES; do
+        log_action_begin_msg "Starting 389 DS instance $INSTANCE: "
+        PIDFILE=$PIDDIR/slapd-$INSTANCE.pid
+        fix_pid_dir_ownership $CONFDIR/slapd-$INSTANCE
+        fix_lock_dir_ownership $CONFDIR/slapd-$INSTANCE $INSTANCE
+        # start the directory server in a subshell so that the instance specific
+        # init config environment will not apply to any other instance
+        (
+            [ -f /etc/default/dirsrv-$INSTANCE ] && . /etc/default/dirsrv-$INSTANCE
+            start-stop-daemon -S --oknodo -x $EXEC -p $PIDFILE -b -- \
+		-D $CONFIG_DIR -i $PIDFILE
+        )
+        log_end_msg $?
+    done
+}
+
+stop() {
+    for INSTANCE in $INSTANCES; do
+        PIDFILE=$PIDDIR/slapd-$INSTANCE.pid
+        if [ -f $PIDFILE ]; then
+	    log_action_begin_msg "Shutting down 389 DS instance $INSTANCE: "
+	    start-stop-daemon -K -p $PIDFILE -x $EXEC
+            PID=`cat $PIDFILE`
+            RETVAL=0
+            while [ $RETVAL -eq 0 ]; do
+                sleep 0.5
+                kill -0 $PID > /dev/null 2>&1
+                RETVAL=$?
+            done
+            rm -f $PIDFILE
+            log_end_msg $?
+	fi
+    done
+}
+
+restart() {
+    stop
+    start
+}
+
+
+case "$1" in
+    start|stop|restart)
+	$1
+    ;;
+
+    status)
+         status_of_proc $BASEEXEC "dirsrv"
+    ;;
+    # FIXME: implement proper force-reload
+    force-reload)
+        if ! check_network; then
+            exit 1
+        fi
+
+	stop
+	sleep 2
+	start
+    ;;
+    
+    *)
+        log_action_msg "Usage: /etc/init.d/dirsrv {start|stop|restart|force-reload} [instance-name]"
+        exit 1
+    ;;
+esac
+
+exit 0

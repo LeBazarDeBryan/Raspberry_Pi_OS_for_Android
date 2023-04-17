@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+
+
+
+if [ "$1" = purge ] ; then
+    rm -f /etc/init.d/.depend.boot
+    rm -f /etc/init.d/.depend.start
+    rm -f /etc/init.d/.depend.stop
+fi

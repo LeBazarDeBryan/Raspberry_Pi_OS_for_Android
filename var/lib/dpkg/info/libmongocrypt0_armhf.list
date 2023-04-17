@@ -1,0 +1,14 @@
+/.
+/usr
+/usr/lib
+/usr/lib/arm-linux-gnueabihf
+/usr/lib/arm-linux-gnueabihf/libkms_message.so.0.0.0
+/usr/lib/arm-linux-gnueabihf/libmongocrypt.so.0.0.0
+/usr/share
+/usr/share/doc
+/usr/share/doc/libmongocrypt0
+/usr/share/doc/libmongocrypt0/changelog.Debian.gz
+/usr/share/doc/libmongocrypt0/changelog.gz
+/usr/share/doc/libmongocrypt0/copyright
+/usr/lib/arm-linux-gnueabihf/libkms_message.so.0
+/usr/lib/arm-linux-gnueabihf/libmongocrypt.so.0

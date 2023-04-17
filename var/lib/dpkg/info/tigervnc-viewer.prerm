@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "remove" ] ; then
+  bindir=/usr/bin
+  mandir=/usr/share/man
+
+  for tiger in xtigervncviewer; do
+    notiger=`echo $tiger | sed -e 's/tiger//'`;
+    noxtiger=${notiger#x};
+    update-alternatives --remove $noxtiger $bindir/$tiger
+  done
+fi
+
+
+
+exit 0

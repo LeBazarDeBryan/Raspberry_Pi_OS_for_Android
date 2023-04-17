@@ -1,0 +1,10 @@
+# Policy says in §10.9: "Directories should be mode 755 or (for
+# group-writability) mode 2775." This is not preferred for sensible information
+# like log files which may disclose error messages or session URLs. Therefore we
+# consider Lintian being wrong here and an override to be appropriate.
+non-standard-dir-perm var/log/lighttpd/ 0750 != 0755
+# Lighttpd uses var/www/html/ as a new default document root
+# # See #730372 and https://lists.debian.org/debian-devel/2012/04/msg00301.html
+lighttpd: dir-or-file-in-var-www var/www/html/
+# This is intentionally provided
+lighttpd: package-contains-empty-directory usr/lib/cgi-bin/

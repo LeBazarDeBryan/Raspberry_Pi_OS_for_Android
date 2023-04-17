@@ -1,0 +1,6 @@
+2a8970ce2b6c9b430ca90fd244e3c0ea  usr/lib/xorg/modules/drivers/xrdpdev_drv.so
+776d6ae0fe0ab1baf9ae11cac75cc2cd  usr/lib/xorg/modules/input/xrdpkeyb_drv.so
+210b8f93c11f26f297acb0257ea90e6a  usr/lib/xorg/modules/input/xrdpmouse_drv.so
+19139367856bd8f099a0fe4ddccdaa28  usr/lib/xorg/modules/libxorgxrdp.so
+97589d8908d814217b026b6798d4cfa5  usr/share/doc/xorgxrdp/changelog.Debian.gz
+080c9d93a439c857bd89a81fb0a667e6  usr/share/doc/xorgxrdp/copyright

@@ -1,0 +1,39 @@
+#!/bin/sh
+
+set -e
+
+
+php_enable() { return 0; }
+
+if [ "$1" = "purge" ]; then
+    phpini=/etc/php/7.4/cli/php.ini
+    # remove the flag to remember the original state
+    if [ -e /etc/php/7.4/cli/.start ]; then
+	rm -f /etc/php/7.4/cli/.start
+    fi
+    for ext in '~' '%' .bak .ucf-new .ucf-old .ucf-dist;  do
+	rm -f $phpini$ext
+    done
+    rm -f $phpini
+    if which ucf >/dev/null; then
+	ucf --purge $phpini
+    fi
+    if which ucfr >/dev/null; then
+	ucfr --purge php7.4-cli $phpini
+    fi
+
+    for dir in \
+	/etc/php/7.4/cli/conf.d \
+	/etc/php/7.4/cli \
+	/etc/php/7.4 \
+	/etc/php;
+    do
+	if [ -d $dir ]; then
+	    rmdir --ignore-fail-on-non-empty $dir
+	fi
+    done
+fi
+
+
+
+exit 0

@@ -1,0 +1,1 @@
+report-with: php7.4-common php7.4-cli libphp7.4-embed libapache2-mod-php7.4 libapache2-mod-php7.4filter php7.4-cgi php7.4-fpm

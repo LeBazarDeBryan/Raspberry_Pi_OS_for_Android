@@ -1,0 +1,95 @@
+#! /bin/sh -e
+# postinst script for lighttpd
+
+set -e
+
+if [ "$1" = "configure" ]; then
+        # Remove a possibly dangling symlink for the obsolete conffile
+        if  dpkg --compare-versions "$2" lt-nl "1.4.32-1" && \
+            [ -L /etc/lighttpd/conf-enabled/10-access.conf -a \
+            ! -f /etc/lighttpd/conf-available/10-access.conf ]; then
+                rm -f /etc/lighttpd/conf-enabled/10-access.conf
+        fi
+
+        # Enable 99-unconfigured.conf if lighttpd has not been configured
+        #   (if /var/www/html/index.html does not exist or is not readable)
+        #   (if index-file.names is unmodified from default lighttpd.conf)
+        nconfs=$(ls /etc/lighttpd/conf-enabled/*.conf 2>/dev/null | wc -l)
+        if [ "$nconfs" = "0" -a ! -r "/var/www/html/index.html" ]; then
+            idx=$(grep index-file\\.names /etc/lighttpd/lighttpd.conf \
+                    2>/dev/null | sed -E 's/[ \t]+/ /g')
+            if [ "$idx" = 'index-file.names = ( "index.php", "index.html" )' ] \
+              && lighty-enable-mod unconfigured; then
+                if [ ! -r /var/www/html/index.lighttpd.html ]; then
+                    cp /usr/share/lighttpd/index.html /var/www/html/index.lighttpd.html
+                fi
+            fi
+        fi
+fi
+
+# dh_installinit will call this function upon failure of rc.d invocation
+# Fixes: #383425
+start_failed()
+{
+	echo "Failed to start Lighttpd. Maybe another webserver is already listening on port 80?"
+	exit 0
+}
+
+# Automatically added by dh_installsystemd/13.3.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# In case this system is running systemd, we need to ensure that all
+	# necessary tmpfiles (if any) are created before starting.
+	if [ -d /run/systemd/system ] ; then
+		systemd-tmpfiles --create lighttpd.tmpfile.conf >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installdeb/13.3.4
+dpkg-maintscript-helper rm_conffile /etc/lighttpd/conf-available/10-access.conf 1.4.31-4 lighttpd -- "$@"
+# End automatically added section
+# Automatically added by dh_installinit/13.3.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -x "/etc/init.d/lighttpd" ]; then
+		update-rc.d lighttpd defaults >/dev/null
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		invoke-rc.d --skip-systemd-native lighttpd $_dh_action || start_failed
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.3.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	# This will only remove masks created by d-s-h on package removal.
+	deb-systemd-helper unmask 'lighttpd.service' >/dev/null || true
+
+	# was-enabled defaults to true, so new installations run enable.
+	if deb-systemd-helper --quiet was-enabled 'lighttpd.service'; then
+		# Enables the unit on first installation, creates new
+		# symlinks on upgrades if the unit file has changed.
+		deb-systemd-helper enable 'lighttpd.service' >/dev/null || true
+	else
+		# Update the statefile to add new symlinks (if any), which need to be
+		# cleaned up on purge. Also remove old symlinks.
+		deb-systemd-helper update-state 'lighttpd.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+# Automatically added by dh_installsystemd/13.3.4
+if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-deconfigure" ] || [ "$1" = "abort-remove" ] ; then
+	if [ -d /run/systemd/system ]; then
+		systemctl --system daemon-reload >/dev/null || true
+		if [ -n "$2" ]; then
+			_dh_action=restart
+		else
+			_dh_action=start
+		fi
+		deb-systemd-invoke $_dh_action 'lighttpd.service' >/dev/null || true
+	fi
+fi
+# End automatically added section
+
+
+exit 0

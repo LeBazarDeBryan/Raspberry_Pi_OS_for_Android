@@ -1,0 +1,13 @@
+e13f15ceb4496ae69c08368a2e9c3cfe  lib/init/bootclean.sh
+5f075acc827c8f42be80d08c9a19f134  lib/init/mount-functions.sh
+fd3ea515f075eca25a27b61561223faa  lib/init/tmpfs.sh
+982a8ab75a85d43e66b4c883c27bfddd  sbin/fsck.nfs
+8e485661cdd693adf713356d87cafb5d  usr/share/doc/initscripts/README.Debian
+1230f5fc7241a90ab5f8b6be3c78028a  usr/share/doc/initscripts/changelog.Debian.gz
+fb49f2bc845caaf75985b4221f32b151  usr/share/doc/initscripts/changelog.gz
+a21e2e9281e9354d0a9c6b49616464ad  usr/share/doc/initscripts/copyright
+f1233ef51f48f04c2d3fd6063b7baac9  usr/share/lintian/overrides/initscripts
+9b40dd2f601a971ff2ff9a1b3dbad2f6  usr/share/man/man5/halt.5.gz
+c86a29c53110cd7a671170f8823222b9  usr/share/man/man5/rcS.5.gz
+90640d22719322a7e2be2bb0e81965ea  usr/share/man/man5/tmpfs.5.gz
+a9a4afb2d26656ab1255417643a0318d  usr/share/man/man8/fsck.nfs.8.gz

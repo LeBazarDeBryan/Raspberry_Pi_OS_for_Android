@@ -1,0 +1,6 @@
+5f006dba2c23e3b774215c3c7a8519be  usr/lib/arm-linux-gnueabihf/libmtdev.so.1.0.0
+77fa9ca780d9f1feaf1d371d28c35013  usr/share/apport/package-hooks/source_mtdev.py
+44c90547a174211ac66c73bc9fd4ad62  usr/share/doc/libmtdev1/README
+9ce754c1650cc98d41a02e24b8fc3240  usr/share/doc/libmtdev1/changelog.Debian.gz
+0db7d0d49c9894f7efc48ba01cc0ece1  usr/share/doc/libmtdev1/changelog.gz
+136ea59386b95f1b19f5c58c277b941d  usr/share/doc/libmtdev1/copyright

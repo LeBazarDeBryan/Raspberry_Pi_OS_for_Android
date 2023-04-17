@@ -1,0 +1,9 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${prefix}/lib/arm-linux-gnueabihf
+includedir=${prefix}/include
+
+Name: xrdp
+Description: An open source Remote Desktop Protocol (RDP) server
+Version: 0.9.19
+Cflags: -I${includedir}

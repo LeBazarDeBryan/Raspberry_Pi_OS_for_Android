@@ -1,0 +1,5 @@
+222cd56d7666fd739a6fea51402063bf  usr/lib/php/20190902/readline.so
+b4358047262260ffb316eb6c9459f16c  usr/share/bug/php7.4-readline/control
+9a9788eba7ef1ed16d8917cfc742f457  usr/share/bug/php7.4-readline/script
+f3d9cdcd17e81f334384c39721ebbb86  usr/share/lintian/overrides/php7.4-readline
+04d2378963688a881deb69b0441f2a80  usr/share/php7.4-readline/readline/readline.ini

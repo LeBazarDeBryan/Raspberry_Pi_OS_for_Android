@@ -1,0 +1,14 @@
+2401523004e2514393c0edc4c35f47f6  lib/init/rc
+7862a970fca2cff93163ac9999619ad6  lib/init/rcS
+7cfaba64c6ba471c9ff083e0d5ed37fa  usr/share/doc/sysv-rc/README.Debian
+95a773449a5d088866d8d9c067080eb6  usr/share/doc/sysv-rc/README.runlevels.gz
+1230f5fc7241a90ab5f8b6be3c78028a  usr/share/doc/sysv-rc/changelog.Debian.gz
+fb49f2bc845caaf75985b4221f32b151  usr/share/doc/sysv-rc/changelog.gz
+a21e2e9281e9354d0a9c6b49616464ad  usr/share/doc/sysv-rc/copyright
+1b68d0fc89b1cd13847c3c3f5f04944d  usr/share/doc/sysv-rc/init.d-README
+3fc185419358039e85ea7e231117b02b  usr/share/doc/sysv-rc/rc0.d-README
+04c254d6d998868d0db72e74f30b84d0  usr/share/doc/sysv-rc/rc1.d-README
+9918a6874e0510e2c70778d23f9a987d  usr/share/doc/sysv-rc/rc2-5.d-README
+77bf501d287d0ed2527ec54743741369  usr/share/doc/sysv-rc/rc6.d-README
+a3c07be36eacceaef3a282f2d0c708bd  usr/share/doc/sysv-rc/rcS.d-README
+03f6a29181c08c2c7f183716b689ebcb  usr/share/lintian/overrides/sysv-rc
