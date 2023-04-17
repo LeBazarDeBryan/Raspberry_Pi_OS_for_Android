@@ -1,6 +1,0 @@
-#!/bin/bash
-service xrdp       stop
-service syslog-ng  stop
-bash -c "unchroot am start -a android.intent.action.REBOOT" > /dev/null 2>&1
-sleep 3
-read -p "Rebooting..."
