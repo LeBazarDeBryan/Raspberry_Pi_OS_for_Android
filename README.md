@@ -18,7 +18,7 @@
 - Install the latest [Linux Deploy](https://github.com/meefik/linuxdeploy/releases/latest) APK
 - Tap the main menu (**Three dots** at the top right of screen)
 - Tap **Install**
-- In a few minutes, the [Raspberry Pi Image](https://github.com/LeBazarDeBryan/Raspberry_Pi_OS_for_Android/releases/download/Preview/raspberry_pi.tgz) will be downloaded and installed on your device.
+- In a few minutes, the [Raspberry Pi Image](https://github.com/LeBazarDeBryan/Raspberry_Pi_OS_for_Android/releases/download/Pre-Release/raspberry_pi.tgz) will be downloaded and installed on your device.
 - When deployment is complete, tap **[  ▷ START ]**  to launch the instance.
 - The instance will provide you with a password to login to Pi-hole webadmin or via SSH/RDP (Username: _android_, see screenshot below)
 - **Note**: The password appears only once when the image is deployed, make sure you record this information.
