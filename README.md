@@ -1,6 +1,6 @@
 # ⚠ WARNING ⚠ : Not developed for the moment.
 
-<h1 align="center"> Pi-hole for Android APK Installer </h1>
+<h1 align="center"> Raspberry Pi for Android APK Installer </h1>
 
 <img height="" width="" src="" alt="" />
 
