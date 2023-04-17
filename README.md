@@ -1,3 +1,5 @@
+# WARNING : Not developed for the moment.
+
 <h1 align="center"> Pi-hole for Android APK Installer </h1>
 
 <img height="" width="" src="" alt="" />
