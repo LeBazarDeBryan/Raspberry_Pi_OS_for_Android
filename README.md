@@ -15,7 +15,10 @@
 
 ### Installation:
 
-- Install the latest [Linux Deploy](https://github.com/meefik/linuxdeploy/releases/latest) APK
+- Install the latest [Pi Deploy](https://github.com/DesktopECHO/Pi-hole-for-Android/releases/latest/download/pideploy.apk) APK
+- Go to Settings
+- Change "Source path" to "[https://github.com/LeBazarDeBryan/Raspberry_Pi_OS_for_Android/releases/download/Pre-Release/raspberry_pi.tgz](https://github.com/LeBazarDeBryan/Raspberry_Pi_OS_for_Android/releases/download/Pre-Release/raspberry_pi.tgz)
+- Close Settings
 - Tap the main menu (**Three dots** at the top right of screen)
 - Tap **Install**
 - In a few minutes, the [Raspberry Pi Image](https://github.com/LeBazarDeBryan/Raspberry_Pi_OS_for_Android/releases/download/Pre-Release/raspberry_pi.tgz) will be downloaded and installed on your device.
