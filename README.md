@@ -1,4 +1,4 @@
-<h1 align="center"> Raspberry Pi for Android APK Installer </h1>
+<h1 align="center">Raspberry Pi for Android</h1>
 
 <img height="" width="" src="" alt="" />
 
