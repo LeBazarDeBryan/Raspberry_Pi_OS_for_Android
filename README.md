@@ -17,7 +17,7 @@
 
 - Install the latest [Pi Deploy](https://github.com/DesktopECHO/Pi-hole-for-Android/releases/latest/download/pideploy.apk) APK
 - Go to Settings
-- Change "Source path" to "[https://github.com/LeBazarDeBryan/Raspberry_Pi_OS_for_Android/releases/download/Pre-Release/raspberry_pi.tgz](https://github.com/LeBazarDeBryan/Raspberry_Pi_OS_for_Android/releases/download/Pre-Release/raspberry_pi.tgz)
+- Change "Source path" to "[https://github.com/LeBazarDeBryan/Raspberry_Pi_OS_for_Android/releases/download/Pre-Release/raspberry_pi.tgz](https://github.com/LeBazarDeBryan/Raspberry_Pi_OS_for_Android/releases/download/Pre-Release/raspberry_pi.tgz)"
 - Close Settings
 - Tap the main menu (**Three dots** at the top right of screen)
 - Tap **Install**
